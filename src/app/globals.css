@@ -1,0 +1,278 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: #020000;
+  --foreground: #171717;
+  --font-urbanist: "Urbanist", sans-serif;
+  --font-mulish: "Mulish", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+/* Ensure proper mobile viewport */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Add padding for fixed header */
+}
+
+/* Enhanced smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll behavior for pricing sections */
+.pricing-scroll {
+  scroll-margin-top: 80px;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Responsive text utilities */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Font family assignments */
+h2 {
+  font-family: var(--font-urbanist);
+}
+
+button {
+  font-family: var(--font-urbanist);
+}
+
+p {
+  font-family: var(--font-mulish);
+}
+
+a {
+  font-family: var(--font-mulish);
+}
+
+
+
+/* Smooth transitions for mobile menu */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Guarantee Section Styles */
+.guarantee-section {
+  position: relative;
+  background: #fff;
+  padding: 56px 0 40px 0;
+  overflow: hidden;
+  text-align: center;
+}
+.guarantee-bg {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+.guarantee-bg-left {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #3b82f6 0%, #a5b4fc 100%);
+  top: -60px;
+  left: -60px;
+}
+.guarantee-bg-right {
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
+  bottom: -60px;
+  right: -60px;
+}
+.guarantee-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.guarantee-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.guarantee-title span {
+  color: #0f172a;
+}
+.guarantee-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+.guarantee-features {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.guarantee-feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+.guarantee-feature-icon {
+  background: #2563eb;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+.guarantee-feature-text {
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .guarantee-features {
+    gap: 24px;
+  }
+  .guarantee-feature {
+    min-width: 180px;
+  }
+}
+@media (max-width: 600px) {
+  .guarantee-section {
+    padding: 36px 0 24px 0;
+  }
+  .guarantee-title {
+    font-size: 1.3rem;
+  }
+  .guarantee-features {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .guarantee-feature {
+    min-width: 0;
+    justify-content: center;
+  }
+}
+
+/* ContactSalesSection styles */
+.contact-sales-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 48px 0;
+}
+
+.contact-sales-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(90deg, #00146b 0%, #0026b3 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.10);
+  padding: 48px 56px;
+  max-width: 1100px;
+  width: 100%;
+  min-height: 400px;
+  gap: 48px;
+}
+
+.contact-sales-content {
+  flex: 1 1 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-sales-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.contact-sales-desc {
+  font-size: 1rem;
+  margin-bottom: 32px;
+  color: #e0e6f7;
+  max-width: 480px;
+}
+
+.contact-sales-btn {
+  background: linear-gradient(90deg, #0080ff 0%, #005be7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.contact-sales-btn:hover {
+  background: linear-gradient(90deg, #005be7 0%, #0080ff 100%);
+}
+
+.contact-sales-illustration {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-sales-illustration img {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .contact-sales-card {
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 32px;
+    min-height: unset;
+  }
+  .contact-sales-illustration img {
+    max-width: 220px;
+  }
+}
+
+
