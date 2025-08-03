@@ -31,10 +31,6 @@ export const metadata: Metadata = {
         type: "image/png",
       },
       {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
         url: "/hostnin-favicon.png",
         sizes: "160x160",
         type: "image/png",

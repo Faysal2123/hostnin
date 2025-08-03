@@ -34,7 +34,7 @@ const sliderSettings = {
 const WordpressReview: React.FC = () => {
  
   return (
-    <section className="bg-[#f8f8f9] pt-32 pb-10">
+    <section className="bg-[#f8f8f9] md:pt-32 pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-2">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10">

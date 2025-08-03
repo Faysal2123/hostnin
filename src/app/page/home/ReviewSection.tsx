@@ -10,7 +10,6 @@ import arrowDark from "../../assets/arrow-dark.webp";
 
 import { IoIosStar } from "react-icons/io";
 import { testimonials } from "../web-hosting/data/testimonialData";
-import { div } from "framer-motion/client";
 
 const sliderSettings = {
   dots: false,
