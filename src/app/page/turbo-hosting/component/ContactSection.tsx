@@ -11,7 +11,8 @@ const ContactSection = ({
 }: ContactSectionProps) => {
   return (
     <div className='bg-[#fafbfc]'>
-      <section className="bg-[#00052E] py-10 md:py-16 relative overflow-hidden max-w-7xl mx-auto">
+      <div className='px-2'>
+        <section className="bg-[#00052E] py-10 md:py-16 relative overflow-hidden max-w-7xl mx-auto">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-20 xs:w-32 h-20 xs:h-32 bg-blue-500/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-32 xs:w-48 h-32 xs:h-48 bg-blue-500/10 rounded-full translate-x-1/4 translate-y-1/4" />
@@ -46,6 +47,7 @@ const ContactSection = ({
         </div>
       </div>
     </section>
+      </div>
     </div>
   );
 };

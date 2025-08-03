@@ -36,7 +36,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pb-24 lg:px-10 relative pt-5"
+      className="pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pb-24 lg:px-10 relative pt-8"
       style={{
         backgroundImage:
           'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
@@ -48,37 +48,37 @@ const HeroSection = () => {
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-5">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
-          <p className="text-yellow-400 font-semibold mb-2 text-base sm:text-xl">
+          <p className="text-yellow-400 font-bold mb-2 text-[16px] sm:text-xl">
             Everything You Need to Create a Website
           </p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-[33px]  md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Get Fastest Hosting
-            <br className="hidden sm:block" />
-            Up to 90% Discount
+            <br/>
+            Up to 76% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm sm:text-lg">
             <li className="flex items-center gap-2 justify-center lg:justify-start">
               <span className="text-lg sm:text-xl">
                 <MdDone />
               </span>
-              <span className="text-sm sm:text-lg">
-                Free Domain on 3 Years Billing
+              <span className="text-base md:text-lg">
+                Free .COM Domain on Trinnially
               </span>
             </li>
             <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl">
+              <span className="text-lg md:text-xl">
                 <MdDone />
               </span>
-              <span className="text-sm sm:text-lg">
-                24/7 Chat, Call and Ticket Support
+              <span className="text-base sm:text-lg">
+                Genuine & Latest Control Panel
               </span>
             </li>
             <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl">
+              <span className="text-lg md:text-xl font-semibold">
                 <MdDone />
               </span>
-              <span className="text-sm sm:text-lg">
-                Lifetime Free Wildcard SSL Certificate
+              <span className="text-base md:text-lg">
+                Free WildCard SSL for Lifetime
               </span>
             </li>
           </ul>
@@ -105,7 +105,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <button 
+         <div className="px-4 md:px-0">
+           <button 
             onClick={() => {
               const pricingSection = document.getElementById('pricing-section');
               if (pricingSection) {
@@ -121,6 +122,7 @@ const HeroSection = () => {
             <span className="relative z-10">Claim Offer Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
           </button>
+         </div>
         </div>
 
         {/* Right Side */}

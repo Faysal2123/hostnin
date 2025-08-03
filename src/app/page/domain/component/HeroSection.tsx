@@ -25,12 +25,12 @@ const HeroSection = () => {
         {/* Left Side - Domain Search Content */}
         <div className="flex-1 text-white lg:pr-12 text-left mb-8 lg:mb-0">
           {/* Main Heading */}
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6 text-white" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6 text-white text-center md:text-start" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Search & Register Domain For Your Website
           </h1>
           
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-base mb-8 sm:mb-12 opacity-90">
+          <p className="text-base md:text-base mb-8 sm:mb-12 opacity-90 text-center md:text-start">
             Cheap domains with advanced features; get top-level domains only at 1650TK/year.
           </p>
 
@@ -56,19 +56,19 @@ const HeroSection = () => {
 
           {/* Domain Pricing */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <div className="text-left">
+            <div className="md:text-left text-center">
               <div className="text-white text-lg sm:text-xl font-bold mb-1">.COM</div>
               <div className="text-slate-300 text-sm sm:text-sm opacity-90">৳1650/Year</div>
             </div>
-            <div className="text-left">
+            <div className="md:text-left text-center">
               <div className="text-white text-lg sm:text-xl font-bold mb-1">.ORG</div>
               <div className="text-slate-300 text-sm sm:text-sm opacity-90">৳1650/Year</div>
             </div>
-            <div className="text-left">
+            <div className="md:text-left text-center">
               <div className="text-white text-lg sm:text-xl font-bold mb-1">.NET</div>
               <div className="text-slate-300 text-sm sm:text-sm opacity-90">৳1650/Year</div>
             </div>
-            <div className="text-left">
+            <div className="md:text-left text-center">
               <div className="text-white text-lg sm:text-xl font-bold mb-1">.XYZ</div>
               <div className="text-slate-300 text-sm sm:text-sm opacity-90">৳599/Year</div>
             </div>

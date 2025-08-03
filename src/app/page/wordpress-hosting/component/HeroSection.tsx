@@ -52,14 +52,14 @@ const HeroSection = () => {
       backgroundSize: "contain, cover"
     }}
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between pt-5">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-6 sm:mb-8 lg:mb-0">
           
-          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight mb-3 sm:mb-4 md:mb-6 px-2 sm:px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
-            2X Fast & Secure<br className="hidden sm:block" />WordPress Hosting
+          <h1 className="text-[25px] md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+            2X Fast & Secure<br/>WordPress Hosting
           </h1>
-          <p className="font-semibold mb-2 text-sm sm:text-base md:text-xl text-white px-2 sm:px-0">
+          <p className="font-semibold mb-2 text-base md:text-xl text-white px-2 sm:px-0">
             WordPress Starter Plan - Starts from only for <span className="text-yellow-400">৳1799/year</span>
           </p>
           <ul className="mb-4 sm:mb-6 md:mb-8 my-3 sm:my-5 space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-lg grid grid-cols-1 sm:grid-cols-2 gap-x-4 sm:gap-x-8 px-2 sm:px-0">
@@ -111,7 +111,7 @@ const HeroSection = () => {
             </div>
           </div>
         
-          <div className="px-2 sm:px-4">
+          <div className="px-4 md:px-0">
           <button 
             onClick={scrollToPricing}
             className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-4 sm:px-6 md:px-10 lg:px-12 py-2.5 sm:py-3 md:py-4 rounded-xl transition-all duration-500 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-4 sm:mb-6 md:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"

@@ -7,7 +7,7 @@ const features = [
   {
     icon: (
       <Image
-        src="https://hostnin.com/wp-content/upljoads/2022/09/pointer.svg"
+        src="https://hostnin.com/wp-content/uploads/2022/09/pointer.svg"
         alt="Pointer Icon"
         width={40}
         height={40}

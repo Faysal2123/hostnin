@@ -37,7 +37,7 @@ const PricingSection = () => {
           Select the hosting plan that best fits your needs. All plans include our premium features and 24/7 support.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 justify-center">
+        <div className="flex flex-row items-center gap-4 mb-4 justify-center">
           <div className="flex bg-[#2a3553] rounded-full p-1">
             <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")} style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
               Monthly

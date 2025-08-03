@@ -30,16 +30,13 @@ const PricingSection = () => {
 
 
   return (
-    <section id="pricing-section" data-section="pricing" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] md:pt-[550px] lg:pt-60 px-3 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+    <section id="pricing-section" data-section="pricing" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] md:pt-[550px] lg:pt-60 px-3 sm:px-6 pt-8" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
       <div className="w-full max-w-7xl">
-        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 md:mb-4 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 md:mb-4 text-center " style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Choose Your Perfect Plan
         </h2>
-        <p className="text-gray-600 text-center text-sm md:text-base mb-8 max-w-2xl mx-auto" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
-          Select the hosting plan that best fits your needs. All plans include our premium features and 24/7 support.
-        </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 justify-center">
+        <div className="flex flex-row items-center gap-4 mb-4 justify-center">
           <div className="flex bg-[#2a3553] rounded-full p-1">
             <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")} style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
               Monthly
@@ -79,7 +76,7 @@ const PricingSection = () => {
                 </marker>
               </defs>
             </svg>
-            <span className="text-blue-400 font-medium text-xs sm:text-base inline ml-10" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>Upto 76% save</span>
+            <span className="text-blue-400 font-medium text-base inline ml-10" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>Upto 76% save</span>
           </div>
         </div>
 

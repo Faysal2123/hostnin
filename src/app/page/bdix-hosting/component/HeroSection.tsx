@@ -59,22 +59,34 @@ const HeroSection = () => {
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
-          <p className="text-yellow-400 font-semibold mb-2 text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
-            Get Fastest Hosting<br className="hidden sm:block" />Upto 76% Discount
+          <p className="text-yellow-400 font-bold mb-2 text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+            Get Fastest Hosting<br/>Upto 76% Discount
           </h1>
-          <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm sm:text-lg">
-            <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm sm:text-lg">Free .COM Domain on Trinnially</span>
+          <ul className="mb-4 sm:mb-6 md:mb-8 my-3 sm:my-5 space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-lg grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 px-2 sm:px-0">
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">Super Fast SSD Storage</span>
             </li>
-            <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm sm:text-lg">Genuine & Latest Control Panel</span>
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">Advanced Cache Management</span>
             </li>
-            <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm sm:text-lg">Free WildCard SSL for Lifetime</span>
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">Lifetime Free SSL Certificate</span>
+            </li>
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">Unlimited Bandwidth</span>
+            </li>
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">Managed WordPress</span>
+            </li>
+            <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
+              <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
+              <span className="text-sm md:text-lg">WordPress Acceleration</span>
             </li>
           </ul>
           {/* Countdown */}
@@ -98,7 +110,7 @@ const HeroSection = () => {
               ))}
             </div>
           </div>
-         <div className="px-4">
+         <div className="px-4 md:px-0">
          <button 
             onClick={scrollToPricing}
             className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"

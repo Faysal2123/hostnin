@@ -55,25 +55,25 @@ const HeroSection = () => {
       backgroundSize: "contain, cover"
     }}
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 pt-5">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
-          <p className="text-yellow-400 font-semibold mb-2 text-base xs:text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
-          Get Turbo Hosting<br className="hidden sm:block" />Flat 50% Discount
+          <p className="text-yellow-400 font-bold mb-2 text-base xs:text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
+          <h1 className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          Get Turbo Hosting<br/>Flat 50% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm xs:text-base sm:text-lg">
             <li className="flex items-center gap-2 justify-center lg:justify-start">
               <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm xs:text-base sm:text-lg">Free Domain on 3 Years Billing</span>
+              <span className="text-base sm:text-lg">Free Domain on 3 Years Billing</span>
             </li>
             <li className="flex items-center gap-2 justify-center lg:justify-start">
               <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm xs:text-base sm:text-lg">Latest cPanel Control Panel</span>
+              <span className="text-base sm:text-lg">Latest cPanel Control Panel</span>
             </li>
             <li className="flex items-center gap-2 justify-center lg:justify-start">
               <span className="text-lg sm:text-xl"><MdDone /></span> 
-              <span className="text-sm xs:text-base sm:text-lg">Free WildCard SSL for Lifetime</span>
+              <span className="text-base sm:text-lg">Free WildCard SSL for Lifetime</span>
             </li>
           </ul>
           {/* Countdown */}
@@ -97,7 +97,7 @@ const HeroSection = () => {
               ))}
             </div>
           </div>
-        <div className="px-4">
+        <div className="px-4 md:px-0">
         <button 
             onClick={scrollToPricing}
             className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"

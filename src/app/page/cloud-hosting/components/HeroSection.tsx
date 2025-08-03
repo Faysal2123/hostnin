@@ -46,7 +46,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="pt-4 pb-8 px-3 sm:pt-8 sm:pb-12 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
+      className="pt-8 pb-8 px-3 sm:pt-8 sm:pb-12 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
       style={{
         backgroundImage:
           'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
@@ -58,37 +58,37 @@ const HeroSection = () => {
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-6 lg:mb-0">
-          <p className="text-yellow-400 font-semibold mb-2 text-sm sm:text-base lg:text-xl">
+          <p className="text-yellow-400 font-bold mb-2 text-base lg:text-xl">
             Expertly Crafted for Online Businesses
           </p>
-          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight mb-3 sm:mb-4 lg:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-[33px] md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4 lg:mb-6 px-2 md:px-0" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Get Fastest Hosting
-            <br className="hidden sm:block" />
-            Upto 76% Discount
+            <br />
+             Upto 90% Discount
           </h1>
-          <ul className="mb-4 sm:mb-6 lg:mb-8 space-y-1.5 sm:space-y-2 text-xs sm:text-sm lg:text-lg">
+          <ul className="mb-4 sm:mb-6 lg:mb-8 space-y-1.5 sm:space-y-2 text-xs sm:text-sm lg:text-lg pt-4 pb-4">
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-sm sm:text-lg lg:text-xl">
                 <MdDone />
               </span>
-              <span className="text-xs sm:text-sm lg:text-lg">
-                Free .COM Domain on Trinnially
+              <span className="text-base lg:text-lg">
+                Free Domain on 3 Years Billing
               </span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-sm sm:text-lg lg:text-xl">
                 <MdDone />
               </span>
-              <span className="text-xs sm:text-sm lg:text-lg">
-                Genuine & Latest Control Panel
+              <span className="text-base lg:text-lg">
+                24/7 Chat, Call and Ticket Support
               </span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-sm sm:text-lg lg:text-xl">
                 <MdDone />
               </span>
-              <span className="text-xs sm:text-sm lg:text-lg">
-                Free WildCard SSL for Lifetime
+              <span className="text-base lg:text-lg">
+                Lifetime Free Wildcard SSL Certificate
               </span>
             </li>
           </ul>
@@ -115,7 +115,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <button 
+         <div className="px-4 md:px-0">
+           <button 
             onClick={scrollToPricing}
             className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
           >
@@ -123,6 +124,7 @@ const HeroSection = () => {
             <span className="relative z-10">Claim Offer Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
           </button>
+         </div>
         </div>
 
         {/* Right Side */}

@@ -10,19 +10,19 @@ const SupportTeamSection = () => {
           <div className="text-white space-y-6">
             {/* Headline */}
             <div className="space-y-2">
-              <h2 className="text-2xl lg:text-4xl font-bold leading-tight font-['Urbanist',sans-serif]">
+              <h2 className="text-xl text-center md:text-start lg:text-4xl font-bold leading-tight font-['Urbanist',sans-serif]">
                 Need Some Help?
               </h2>
-              <h3 className="text-2xl lg:text-4xl font-bold font-['Urbanist',sans-serif]">
+              <h3 className="text-xl text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Call to get assist with
               </h3>
-              <h4 className="text-2xl lg:text-4xl font-bold font-['Urbanist',sans-serif]">
+              <h4 className="text-xl text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Registering your Domains
               </h4>
             </div>
 
             {/* Body Text */}
-            <p className="text-lg leading-relaxed max-w-xl text-justify font-['Mulish',sans-serif]">
+            <p className="text-base leading-relaxed max-w-xl text-justify font-['Mulish',sans-serif]">
               Our team of experts is always available to assist you with registering
               your desired domains with Hostnin. For live 24/7 assistance, call us on
               WhatsApp. We&apos;re here to help you every step of the way.

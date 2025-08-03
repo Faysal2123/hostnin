@@ -10,6 +10,7 @@ import arrowDark from "../../assets/arrow-dark.webp";
 
 import { IoIosStar } from "react-icons/io";
 import { testimonials } from "../web-hosting/data/testimonialData";
+import { div } from "framer-motion/client";
 
 const sliderSettings = {
   dots: false,
@@ -24,7 +25,8 @@ const sliderSettings = {
 };
 
 const ReviewSection = () => (
-  <section className="flex flex-col lg:flex-row justify-center items-center gap-8 py-12 px-4 sm:px-6 bg-[#f8f8f8]">
+  <div className="bg-[#f8f8f8] pb-5">
+    <section className="flex flex-col lg:flex-row justify-center items-center gap-8 py-5 md:py-12 px-2 sm:px-6 ">
     {/* Left Side */}
     <div className="relative w-full lg:flex-1 max-w-lg flex flex-col items-start">
       {/* Background Circle */}
@@ -137,6 +139,7 @@ const ReviewSection = () => (
       </Slider>
     </div>
   </section>
+  </div>
 );
 
 export default ReviewSection;

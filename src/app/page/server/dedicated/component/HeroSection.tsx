@@ -17,12 +17,12 @@ const HeroSection = () => {
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-white font-semibold mb-2 text-base sm:text-xl">
-            Plans Starting at <span className="text-yellow-400">৳99999/mo</span>
+            Plans Starting at <span className="text-yellow-400">৳9999/mo</span>
           </p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: '"Urbanist", sans-serif' }}>
-            Managed Dedicated<br className="hidden sm:block" /> Server Hosting
+          <h1 className="text-[33px] md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+            Managed Dedicated<br /> Server Hosting
           </h1>
-          <p className="mb-6 my-5 sm:mb-8 text-sm sm:text-lg text-white/90" style={{ fontFamily: '"Mulish", sans-serif' }}>
+          <p className="mb-6 my-5 sm:mb-8 text-base  sm:text-lg text-white/90" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Hostnin specializes in bare-metal technology. You can host your website, set up your high-resilience infrastructure, or customize your machine with just a few clicks.
           </p>
           <ul className="flex flex-wrap gap-x-8 gap-y-2 justify-center lg:justify-start mb-6 sm:mb-8">
