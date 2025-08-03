@@ -36,6 +36,16 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('[data-section="pricing"]');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section className="pt-8 pb-12 px-2 xs:px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
     style={{
@@ -49,7 +59,7 @@ const HeroSection = () => {
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-yellow-400 font-semibold mb-2 text-base xs:text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
           Get Turbo Hosting<br className="hidden sm:block" />Flat 50% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm xs:text-base sm:text-lg">
@@ -67,21 +77,36 @@ const HeroSection = () => {
             </li>
           </ul>
           {/* Countdown */}
-          <div className="flex gap-1 xs:gap-2 sm:gap-3 mb-8 sm:mb-14 justify-center lg:justify-start flex-wrap">
-            {['days', 'hours', 'minutes', 'seconds'].map((unit, index) => (
-              <div key={index} className="bg-white text-[#03206B] rounded p-2 xs:p-2 sm:p-3 text-center w-12 xs:w-14 sm:w-16 md:w-20 mb-2">
-                <div className="text-xl xs:text-xl sm:text-2xl md:text-3xl font-bold">
-                  {String(timeLeft[unit as keyof typeof timeLeft]).padStart(2, '0')}
+          <div className="mb-8 sm:mb-14">
+            <div className="flex gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-14 justify-center lg:justify-start flex-wrap">
+              {["days", "hours", "minutes", "seconds"].map((unit, index) => (
+                <div
+                  key={index}
+                  className="bg-white text-[#03206B] rounded-lg p-3 sm:p-4 lg:p-5 text-center w-16 sm:w-18 md:w-20 lg:w-24 mb-2 sm:mb-3 shadow-lg"
+                >
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+                    {String(timeLeft[unit as keyof typeof timeLeft]).padStart(
+                      2,
+                      "0"
+                    )}
+                  </div>
+                  <div className="text-xs sm:text-sm font-medium leading-tight mt-1">
+                    {unit === "seconds" ? "Second" : unit.charAt(0).toUpperCase() + unit.slice(1)}
+                  </div>
                 </div>
-                <div className="text-xs font-medium">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-          <button className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2">
+        <div className="px-4">
+        <button 
+            onClick={scrollToPricing}
+            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
+          >
             <FaBolt className="text-lg animate-pulse" />
             <span className="relative z-10">Claim Offer Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
           </button>
+        </div>
         </div>
         {/* Right Side */}
         <div className="flex-1 flex justify-center mt-4 sm:mt-8 lg:mt-0 w-full max-w-[220px] xs:max-w-xs sm:max-w-md lg:max-w-xl xl:max-w-2xl h-full">
@@ -94,7 +119,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="hidden sm:block">
         <FeatureCards cards={cardData} bottom="-40px xs:-60px sm:-120px lg:-180px" />
       </div>
     </section>

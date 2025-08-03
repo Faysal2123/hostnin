@@ -34,6 +34,16 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const scrollToPricing = () => {
+    const pricingSection = document.querySelector('[data-section="pricing"]');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section
       className="pt-4 pb-8 px-3 sm:pt-8 sm:pb-12 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
@@ -84,26 +94,31 @@ const HeroSection = () => {
           </ul>
 
           {/* Countdown */}
-          <div className="flex gap-1 sm:gap-2 lg:gap-3 mb-6 sm:mb-8 lg:mb-14 justify-center lg:justify-start flex-wrap">
-            {["days", "hours", "minutes", "seconds"].map((unit, index) => (
-              <div
-                key={index}
-                className="bg-white text-[#03206B] rounded p-1.5 sm:p-2 lg:p-3 text-center w-12 sm:w-14 md:w-16 lg:w-20 mb-1 sm:mb-2"
-              >
-                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
-                  {String(timeLeft[unit as keyof typeof timeLeft]).padStart(
-                    2,
-                    "0"
-                  )}
+          <div className="mb-8 sm:mb-14">
+            <div className="flex gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-14 justify-center lg:justify-start flex-wrap">
+              {["days", "hours", "minutes", "seconds"].map((unit, index) => (
+                <div
+                  key={index}
+                  className="bg-white text-[#03206B] rounded-lg p-3 sm:p-4 lg:p-5 text-center w-16 sm:w-18 md:w-20 lg:w-24 mb-2 sm:mb-3 shadow-lg"
+                >
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+                    {String(timeLeft[unit as keyof typeof timeLeft]).padStart(
+                      2,
+                      "0"
+                    )}
+                  </div>
+                  <div className="text-xs sm:text-sm font-medium leading-tight mt-1">
+                    {unit === "seconds" ? "Second" : unit.charAt(0).toUpperCase() + unit.slice(1)}
+                  </div>
                 </div>
-                <div className="text-xs font-medium">
-                  {unit.charAt(0).toUpperCase() + unit.slice(1)}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          <button className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2">
+          <button 
+            onClick={scrollToPricing}
+            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
+          >
             <FaBolt className="text-lg animate-pulse" />
             <span className="relative z-10">Claim Offer Now</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
@@ -122,7 +137,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div>
+      <div className="hidden sm:block">
         <FeatureCards cards={cardData} bottom="-60px sm:-80px lg:-120px xl:-180px" />
       </div>
     </section>

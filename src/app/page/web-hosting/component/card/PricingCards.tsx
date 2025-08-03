@@ -28,7 +28,7 @@ const PricingSection = () => {
 
 
   return (
-    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] pt-[600px] sm:pt-[500px] md:pt-[550px] lg:pt-60 px-3 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] ]  md:pt-[550px] lg:pt-60 px-3 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
       <div className="w-full max-w-7xl">
         <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4  md:mb-4 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Choose Your Perfect Plan

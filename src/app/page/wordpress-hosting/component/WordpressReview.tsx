@@ -105,11 +105,11 @@ const WordpressReview: React.FC = () => {
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'auto';
-                    (e.currentTarget.style as any).msOverflowStyle = 'auto';
+                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'auto';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'none';
-                    (e.currentTarget.style as any).msOverflowStyle = 'none';
+                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'none';
                   }}
                 >
                   {review.review}
