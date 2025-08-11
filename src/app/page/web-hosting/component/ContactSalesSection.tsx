@@ -4,7 +4,7 @@ import manAttendingOnlineMeeting from '../../../assets/man-attending-online-meet
 const ContactSalesSection = () => {
   return (
     <section className="py-6 sm:py-8 md:py-10 bg-[#f8f8f8] w-full flex justify-center px-4 sm:px-6">
-      <div className="flex flex-col lg:flex-row items-center bg-gradient-to-r from-blue-950 to-blue-800 rounded-2xl shadow-2xl px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 max-w-7xl w-full min-h-[250px] sm:min-h-[300px] gap-6 sm:gap-8 lg:gap-0">
+      <div className="flex flex-col lg:flex-row items-center bg-gradient-to-r from-blue-950 to-blue-800 rounded-2xl shadow-2xl px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-8 max-w-7xl w-full min-h-[250px] sm:min-h-[200px] gap-6 sm:gap-8 lg:gap-0">
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col justify-center items-start lg:pr-10 text-center lg:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 leading-tight font-['Urbanist',sans-serif]">

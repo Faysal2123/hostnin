@@ -1,8 +1,11 @@
 import React from 'react';
 import { hostingPlans } from './data/hostingPlans';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function HostingPlansSection() {
+  const router = useRouter();
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 text-center">
@@ -42,6 +45,7 @@ export default function HostingPlansSection() {
                 <span className="text-base group-hover:text-white transition-colors duration-200">{plan.duration}</span>
               </div>
               <button
+                onClick={() => router.push(`/page/${plan.title.toLowerCase().replace(/\s+/g, '-')}`)}
                 className="w-full max-w-xs border border-blue-100 text-blue-600 bg-white py-2 rounded-xl font-semibold hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-blue-900 group-hover:text-white group-hover:border-white transition-all duration-200 flex items-center justify-center gap-2"
               >
                 {plan.buttonText}

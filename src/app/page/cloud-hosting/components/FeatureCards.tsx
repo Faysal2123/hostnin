@@ -48,7 +48,7 @@ const FeatureCards = () => {
           What are Specials?
         </h1>
         <p className='text-gray-500 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg px-3 sm:px-4' style={{ fontFamily: '"Mulish", sans-serif' }}>You&apos;ll get more resources for less money with our plans, so you can count on their reliability. It&apos;s easier than you think to start your own website with Hostnin!  </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl w-full px-3 sm:px-4 pb-6 sm:pb-8 lg:pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl w-full px-3 sm:px-4 pb-6 sm:pb-8 lg:pb-20">
           {features.map((feature, idx) => (
             <div
               key={idx}

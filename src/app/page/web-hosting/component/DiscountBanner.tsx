@@ -32,11 +32,11 @@ const DiscountBanner: React.FC = () => {
   if (!show) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white px-2 sm:px-4 py-2 text-sm">
+    <div className="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white px-2 md:px-4 py-2 md:py-6 text-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap">
         {/* Left: Sale & Countdown */}
         <div className="flex items-center gap-2 shrink-0">
-          <span className="font-semibold text-sm sm:text-base md:text-lg whitespace-nowrap">Black Friday Sale</span>
+          <span className="font-semibold text-sm sm:text-base md:text-xl whitespace-nowrap">Black Friday Sale</span>
           <div className="flex space-x-1">
             {["Hour", "Min", "Sec"].map((label, i) => {
               const value = [timeLeft.hours, timeLeft.minutes, timeLeft.seconds][i];
@@ -45,7 +45,7 @@ const DiscountBanner: React.FC = () => {
                   key={label}
                   className="bg-white text-[#1a2340] rounded-md px-2 py-1 flex flex-col items-center min-w-[36px]"
                 >
-                  <span className="font-bold text-sm">{String(value).padStart(2, '0')}</span>
+                  <span className="font-bold text-sm md:text-lg">{String(value).padStart(2, "0")}</span>
                   <span className="text-[10px]">{label}</span>
                 </div>
               );
@@ -55,7 +55,7 @@ const DiscountBanner: React.FC = () => {
 
         {/* Center: Offer Text */}
         <div className="hidden sm:block text-center flex-1">
-          <span className="font-semibold text-sm sm:text-base whitespace-nowrap">
+          <span className="font-semibold text-sm sm:text-base md:text-lg whitespace-nowrap">
             Get 80% off Hosting plans + free Domain & SSL!
           </span>
         </div>
@@ -64,7 +64,13 @@ const DiscountBanner: React.FC = () => {
         <div className="flex items-center gap-2 shrink-0 ml-auto">
           <button className="flex items-center text-xs sm:text-sm font-semibold whitespace-nowrap">
             <span>View Details</span>
-            <svg className="ml-1 w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              className="ml-1 w-3 h-3 sm:w-4 sm:h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>

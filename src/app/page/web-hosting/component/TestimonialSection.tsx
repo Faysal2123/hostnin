@@ -50,7 +50,7 @@ const TestimonialSection = () => (
           <br />
           happy customers
         </h2>
-        <p className="text-gray-500 mb-3 sm:mb-4 md:mb-6 max-w-md text-xs sm:text-sm md:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>
+        <p className="text-gray-500 mb-3 sm:mb-4 md:mb-6 max-w-md text-sm sm:text-sm md:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>
           Getting positive reviews from hundreds of clients means a lot to us. We care about every feedback and adjust our services accordingly.
         </p>
         <div className="flex items-center gap-2 mt-2">
@@ -117,7 +117,7 @@ const TestimonialSection = () => (
                 </div>
               </div>
             </div>
-            <p className="text-gray-600 mt-3 sm:mt-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-[17px] leading-relaxed max-w-3xl px-2 sm:px-5" style={{ fontFamily: '"Mulish", sans-serif' }}>
+            <p className="text-gray-600 mt-3 sm:mt-4 mb-6 sm:mb-8 text-sm sm:text-sm md:text-[17px] leading-relaxed max-w-3xl px-2 sm:px-5" style={{ fontFamily: '"Mulish", sans-serif' }}>
               {testimonial.text}
             </p>
             <Image src="https://hostnin.com/wp-content/uploads/2023/08/quote-icon.svg" alt={testimonial.name} width={50} height={50} className="text-start pl-2 sm:pl-4 sm:w-[70px] sm:h-[70px]" />
