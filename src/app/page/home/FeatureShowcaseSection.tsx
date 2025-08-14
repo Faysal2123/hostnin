@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function FeatureShowcaseSection() {
+  const router = useRouter();
   return (
     <div className="bg-[#f8f8f8]">
       <section className="w-full mx-auto flex flex-col md:flex-row justify-between items-stretch gap-6 py-8">
@@ -20,7 +23,7 @@ export default function FeatureShowcaseSection() {
               Reliable web hosting with 99.9% uptime guaranteed.
             </h4>
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#7B2FF2] text-white text-base">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-600 text-white text-base">
                 ✓
               </span>
               <span className="text-gray-700 text-base">
@@ -45,7 +48,9 @@ export default function FeatureShowcaseSection() {
             <h4 className="font-bold text-2xl md:text-4xl mb-6 text-white drop-shadow">
               Install over 150 CMS with one click.
             </h4>
-            <button className="w-fit cursor-pointer px-6 py-3 bg-white text-[#0a174e] font-semibold rounded shadow hover:bg-gray-300 transitio hover:text-black">
+            <button
+            onClick={() => router.push("/web-hosting")}
+            className="w-fit cursor-pointer px-6 py-3 bg-white text-[#0a174e] font-semibold rounded shadow hover:bg-gray-300 transition hover:text-black">
               See More Now
             </button>
           </div>

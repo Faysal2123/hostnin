@@ -40,10 +40,10 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
   }, []);
 
   return (
-    <div className="bg-[#f8f8f8] py-8 sm:py-12 lg:py-16 lg:pb-28">
+    <div className="bg-[#f8f8f8]  py-8 sm:py-12 lg:py-16 lg:pb-28">
       <div className="max-w-7xl mx-auto ">
         <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-800 to-indigo-900 bg-clip-text text-transparent mb-3 sm:mb-4">
+          <h1 className="text-[26px] sm:text-3xl lg:text-5xl font-bold text-black bg-clip-text mb-3 sm:mb-4">
             Compare BDIX Hosting Plans
           </h1>
           <p className="text-slate-600 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-4">
@@ -54,7 +54,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
         {/* Sticky Header - Separate Element */}
         {isSticky && (
           <div 
-            className="fixed top-20 left-0 right-0 z-40 bg-gradient-to-r from-blue-800 to-indigo-900 shadow-lg hidden lg:block"
+            className="fixed top-20 left-0 right-0 z-40 bg-gradient-to-r from-blue-800 to-blue-600 shadow-lg hidden lg:block"
             style={{
               width: '100%',
               maxWidth: '80rem',
@@ -73,28 +73,28 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="p-4 lg:p-6 text-white font-bold text-base lg:text-lg border-r border-blue-700/50">
-                    <div className="flex items-center justify-center">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 lg:mr-3"></div>
+                  <th className="p-4 lg:p-4 text-white font-bold text-base lg:text-lg border-r border-blue-700/50">
+                    <div className="flex items-center justify-center text-2xl">
+                     
                       Features
                     </div>
                   </th>
                   {data.plans.map((plan, planIdx) => (
                     <th
                       key={plan.name}
-                      className={`p-4 lg:p-6 text-white text-center border-r border-blue-700/50 ${
+                      className={`p-4 lg:p-3   text-white text-center border-r border-blue-700/50 ${
                         planIdx === data.plans.length - 1 ? 'border-r-0' : ''
                       }`}
                     >
                       <div className="space-y-2 lg:space-y-3">
                         <div className="font-bold text-lg lg:text-xl">{plan.name}</div>
                         <div className="bg-white/15 rounded-lg p-2 lg:p-3 backdrop-blur-sm border border-white/25">
-                          <div className="text-2xl lg:text-3xl font-bold text-white">
+                          <div className="text-2xl lg:text-[27px] font-bold text-white">
                             ৳{plan.price}
                           </div>
                           <div className="text-xs lg:text-sm text-blue-200">{plan.priceUnit}</div>
                         </div>
-                        <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-white font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm lg:text-base">
+                        <button className="w-full bg-white transition-all duration-300 text-black font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm lg:text-base cursor-pointer">
                           Order Now
                         </button>
                       </div>
@@ -124,7 +124,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
           <div className="lg:hidden">
             {data.plans.map((plan, planIdx) => (
               <div key={plan.name} className="border-b border-gray-200 last:border-b-0">
-                <div className="bg-gradient-to-r from-blue-800 to-indigo-900 p-4">
+                <div className="bg-gradient-to-r from-blue-700 to-blue-600 p-4">
                   <div className="text-center space-y-3">
                     <div className="font-bold text-xl text-white">{plan.name}</div>
                     <div className="bg-white/15 rounded-lg p-3 backdrop-blur-sm border border-white/25">
@@ -133,7 +133,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                       </div>
                       <div className="text-sm text-blue-200">{plan.priceUnit}</div>
                     </div>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <button className="cursor-pointer w-full bg-white/95 transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                       Order Now
                     </button>
                   </div>
@@ -143,9 +143,9 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                   {data.sections.map((section, sectionIdx) => (
                     <div key={sectionIdx} className="mb-6 last:mb-0">
                       {sectionIdx > 0 && (
-                        <div className="bg-gradient-to-r from-blue-800 to-indigo-900 p-3 mb-4 rounded-lg">
+                        <div className="bg-gradient-to-r from-blue-700 to-blue-600 p-3 mb-4 rounded-lg">
                           <div className="flex items-center justify-center">
-                            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                            
                             <span className="text-lg font-bold text-white">{section.title}</span>
                           </div>
                         </div>
@@ -155,7 +155,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                         {section.features.map((feature, featureIdx) => (
                           <div key={featureIdx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                             <div className="flex items-center flex-1">
-                              <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></div>
+                              
                               <span className="font-semibold text-gray-700 text-sm">{feature.label}</span>
                             </div>
                             <div className="ml-4">
@@ -200,19 +200,19 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
               {/* Original Header */}
               <thead 
                 ref={headerRef}
-                className="bg-gradient-to-r from-blue-800 to-indigo-900"
+                className="bg-gradient-to-r from-blue-800 to-blue-600"
               >
                 <tr>
                   <th className="p-6 text-white font-bold text-lg border-r border-blue-700/50">
-                    <div className="flex items-center justify-center">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <div className="flex items-center justify-center text-2xl">
+                     
                       Features
                     </div>
                   </th>
                   {data.plans.map((plan, planIdx) => (
                     <th
                       key={plan.name}
-                      className={`p-6 text-white text-center border-r border-blue-700/50 ${
+                      className={`p-3 text-white text-center border-r border-blue-700/50 ${
                         planIdx === data.plans.length - 1 ? 'border-r-0' : ''
                       }`}
                     >
@@ -224,7 +224,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                           </div>
                           <div className="text-sm text-blue-200">{plan.priceUnit}</div>
                         </div>
-                        <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <button className="w-full bg-white/95 transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                           Order Now
                         </button>
                       </div>
@@ -238,11 +238,11 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                   <React.Fragment key={sectionIdx}>
                     {/* Section Title Row - Only for sections after the first one */}
                     {sectionIdx > 0 && (
-                      <tr className="bg-gradient-to-r from-blue-800 to-indigo-900">
+                      <tr className="bg-gradient-to-r from-blue-800 to-blue-600">
                         <th colSpan={data.plans.length + 1} className="p-6 text-center">
                           <div className="flex items-center justify-center">
-                            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                            <span className="text-xl font-bold text-white">{section.title}</span>
+                            
+                            <span className="text-2xl font-bold text-white">{section.title}</span>
                           </div>
                         </th>
                       </tr>
@@ -257,8 +257,8 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                         }`}
                       >
                         <td className="p-6 font-semibold text-gray-700 border-r border-gray-200">
-                          <div className="flex items-center">
-                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></div>
+                          <div className="flex items-center text-lg">
+                          
                             {feature.label}
                           </div>
                         </td>

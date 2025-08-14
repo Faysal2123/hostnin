@@ -4,6 +4,7 @@ import Image from "next/image";
 import { IoIosChatbubbles } from "react-icons/io";
 import FeatureCards from "./FeatureCards";
 import cardData from "./data/cardData";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -17,7 +18,7 @@ const HeroSection = () => {
         backgroundSize: "contain, cover",
       }}
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between pt-8 md:pt-0">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <h1
@@ -38,13 +39,13 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-5 px-5 md:px-0">
-            <button
+            <Link href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
               className="bg-blue-700 hover:bg-blue-500 hover:text-white text-white font-semibold px-4 md:px-8 lg:px-6 py-2 md:py-3 rounded-full transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10 flex items-center justify-center gap-2"
               style={{ fontFamily: '"Urbanist", sans-serif' }}
             >
               <IoIosChatbubbles />
               live chat
-            </button>
+            </Link>
           </div>
         </div>
 

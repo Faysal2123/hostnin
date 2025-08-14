@@ -10,10 +10,10 @@ const FeatureBenefitSection: React.FC = () => {
       }}
     >
       <div className="relative z-10 flex flex-col items-center w-full pt-12 sm:pt-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 sm:mb-4 text-black">
+        <h2 className="text-[25px] md:text-3xl lg:text-4xl font-bold text-center mb-2 sm:mb-4 text-black">
           Why Choose Web Hosting?
         </h2>
-        <p className="text-center text-black max-w-[700px] mb-6 sm:mb-8 md:mb-10 text-sm sm:text-base">
+        <p className="text-center text-black max-w-[700px] mb-6 sm:mb-8 md:mb-10 text-[15px] sm:text-base">
           With our Web Hosting plans, you&apos;ll receive more resources for less money,
           ensuring the reliability you can count on. Starting your own business with Hostnin is easier than you think!
         </p>
@@ -23,21 +23,21 @@ const FeatureBenefitSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-md p-4 sm:p-6 flex flex-col items-start hover:shadow-lg transition-shadow min-h-[220px] sm:min-h-[260px]"
+                className="bg-white rounded-xl shadow-md p-7 md:p-6 flex flex-col items-start hover:shadow-lg transition-shadow min-h-[220px] sm:min-h-[260px]"
               >
                 <div className="flex items-center mb-2 sm:mb-3 gap-2">
                   <div className="text-4xl sm:text-4xl md:text-5xl text-blue-700">
                     <Icon />
                   </div>
                   <h3
-                    className="font-semibold text-base sm:text-xl text-black"
+                    className="font-semibold text-lg md:text-xl text-black"
                     style={{ fontFamily: '"Urbanist", sans-serif' }}
                   >
                     {benefit.title}
                   </h3>
                 </div>
                 <p
-                  className="text-gray-600 text-sm sm:text-base"
+                  className="text-gray-600 text-[15px] sm:text-base text-justify"
                   style={{ fontFamily: '"Mulish", sans-serif' }}
                 >
                   {benefit.description}

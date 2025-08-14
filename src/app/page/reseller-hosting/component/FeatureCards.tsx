@@ -22,7 +22,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => (
             <span className="text-pink-600 text-3xl sm:text-3xl md:text-5xl font-bold" style={{ fontFamily: '"Mulish", sans-serif' }}>{plan.currency}{plan.price}</span>
             <span className="text-gray-500 text-sm sm:text-base font-medium ml-1 mb-1" style={{ fontFamily: '"Mulish", sans-serif' }}>/mo</span>
           </div>
-          <button className="w-full bg-[#0a1747] text-white font-semibold py-3 mb-2 sm:mb-4 hover:bg-[#03206B] transition text-xs sm:text-lg" style={{ fontFamily: '"Mulish", sans-serif' }}>
+          <button className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 mb-2 sm:mb-4  transition text-xs sm:text-lg" style={{ fontFamily: '"Mulish", sans-serif' }}>
             {plan.buttonText}
           </button>
         </div>
@@ -32,7 +32,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => (
               <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                 <FaCheck className="w-2 h-2 text-white" />
               </div>
-                              <span className="text-slate-700 text-sm md:text-lg" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.text}</span>
+                              <span className="text-slate-700 text-[15px] md:text-lg py-1" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.text}</span>
             </li>
           ))}
         </ul>

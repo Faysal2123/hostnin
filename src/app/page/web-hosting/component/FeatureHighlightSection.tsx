@@ -25,7 +25,7 @@ const FeatureHighlightSection = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                 {feature.title}
               </h2>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg font-normal  text-justify md:w-[500px]" style={{ fontFamily: '"Mulish", sans-serif' }}>
+              <p className="text-gray-700 text-[15px] sm:text-base md:text-lg font-normal  text-justify md:w-[500px] pb-10" style={{ fontFamily: '"Mulish", sans-serif' }}>
                 {feature.description}
               </p>
             </div>

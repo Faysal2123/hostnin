@@ -36,16 +36,7 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const scrollToPricing = () => {
-    const pricingSection = document.querySelector('[data-section="pricing"]');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
+  
   return (
     <section className="pt-8 pb-12 px-2 xs:px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
     style={{
@@ -57,8 +48,8 @@ const HeroSection = () => {
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 pt-5">
         {/* Left Side */}
-        <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
-          <p className="text-yellow-400 font-bold mb-2 text-base xs:text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
+        <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0 pt-8 md:pt-0">
+          <p className="text-yellow-400 font-bold mb-2 text-base xs:text-base sm:text-xl">Lightning-Fast Hosting for Seamless Performance</p>
           <h1 className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
           Get Turbo Hosting<br/>Flat 50% Discount
           </h1>
@@ -99,8 +90,17 @@ const HeroSection = () => {
           </div>
         <div className="px-4 md:px-0">
         <button 
-            onClick={scrollToPricing}
-            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
+           onClick={() => {
+                const pricingSection =
+                  document.getElementById("pricing-section");
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2 cursor-pointer"
           >
             <FaBolt className="text-lg animate-pulse" />
             <span className="relative z-10">Claim Offer Now</span>

@@ -46,7 +46,7 @@ const WhyChooseDedicatedSection: React.FC = () => {
         }}
       >
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+          <h2 className="text-[30px] md:text-5xl font-bold text-white mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Why choose Hostnin for Dedicated Servers?
           </h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto" style={{ fontFamily: '"Mulish", sans-serif' }}>
@@ -70,9 +70,9 @@ const WhyChooseDedicatedSection: React.FC = () => {
                     priority={idx === 0} // optionally prioritize first image
                   />
                 </div>
-                <h3 className="font-bold text-lg md:text-xl lg:text-[22px] text-black" style={{ fontFamily: '"Urbanist", sans-serif' }}>{card.title}</h3>
+                <h3 className="font-bold text-xl md:text-xl lg:text-[22px] text-black" style={{ fontFamily: '"Urbanist", sans-serif' }}>{card.title}</h3>
               </div>
-              <p className="text-gray-700 text-sm md:text-base " style={{ fontFamily: '"Mulish", sans-serif' }}>{card.description}</p>
+              <p className="text-gray-700 text-base md:text-base " style={{ fontFamily: '"Mulish", sans-serif' }}>{card.description}</p>
             </div>
           ))}
         </div>

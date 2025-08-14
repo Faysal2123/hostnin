@@ -36,12 +36,12 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const scrollToPricing = () => {
-    const pricingSection = document.querySelector('[data-section="pricing"]');
+ const scrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing-section");
     if (pricingSection) {
-      pricingSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      pricingSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -66,27 +66,27 @@ const HeroSection = () => {
           <ul className="mb-4 sm:mb-6 md:mb-8 my-3 sm:my-5 space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-lg grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 px-2 sm:px-0">
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">Super Fast SSD Storage</span>
+              <span className="text-[16px] md:text-lg">Super Fast SSD Storage</span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">Advanced Cache Management</span>
+              <span className="text-[16px] md:text-lg">Advanced Cache Management</span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">Lifetime Free SSL Certificate</span>
+              <span className="text-[16px] md:text-lg">Lifetime Free SSL Certificate</span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">Unlimited Bandwidth</span>
+              <span className="text-[16px] md:text-lg">Unlimited Bandwidth</span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">Managed WordPress</span>
+              <span className="text-[16px] md:text-lg">Managed WordPress</span>
             </li>
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
-              <span className="text-sm md:text-lg">WordPress Acceleration</span>
+              <span className="text-[16px] md:text-lg">WordPress Acceleration</span>
             </li>
           </ul>
           {/* Countdown */}
@@ -113,7 +113,7 @@ const HeroSection = () => {
          <div className="px-4 md:px-0">
          <button 
             onClick={scrollToPricing}
-            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
+            className="relative cursor-pointer bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
           >
             <FaBolt className="text-lg animate-pulse" />
             <span className="relative z-10">Claim Offer Now</span>

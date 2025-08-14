@@ -75,11 +75,11 @@ const ControlPanelSection = () => {
                     className={`bg-[#061B5B] border border-blue-400 rounded-lg px-6 sm:px-8 py-4 sm:py-6 text-white transition-all duration-300 ease-in-out shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300 scale-[1.02]' : 'hover:bg-[#0a256b]/80 hover:scale-[1.01]'} min-h-[60px] sm:min-h-[70px]`}
                     onClick={() => setOpenIdx(idx)}
                   >
-                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
+                    <div className="font-semibold text-base sm:text-base lg:text-lg mb-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
                       {feature.title}
                     </div>
                     {isOpen && feature.description && (
-                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed overflow-hidden animate-slide-down" style={{ fontFamily: '"Mulish", sans-serif' }}>
+                      <div className="text-[15px] sm:text-sm text-blue-100 leading-relaxed overflow-hidden animate-slide-down" style={{ fontFamily: '"Mulish", sans-serif' }}>
                         {feature.description}
                       </div>
                     )}

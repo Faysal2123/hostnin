@@ -7,9 +7,7 @@ const mulish = Mulish({ subsets: ["latin"] });
 const PrivacyPolicy = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-10">
-        {/* Header */}
-        <header className="text-center mb-14">
+      <header className="text-center mb-14">
           <h1 className={`text-5xl font-extrabold text-blue-700 tracking-tight ${urbanist.className}`}>
             Privacy Policy
           </h1>
@@ -18,6 +16,9 @@ const PrivacyPolicy = () => {
             and protect your information.
           </p>
         </header>
+      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-10">
+        {/* Header */}
+        
 
         {/* Sections */}
         <div className="space-y-12">

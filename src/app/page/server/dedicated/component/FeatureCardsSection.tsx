@@ -32,8 +32,8 @@ const FeatureCardsSection: React.FC = () => {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-bold text-lg md:text-xl lg:text-[22px] mb-2 text-black" style={{ fontFamily: '"Mulish", sans-serif' }}>{card.title}</h3>
-              <p className="text-gray-500 text-sm md:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>{card.description}</p>
+              <h3 className="font-bold text-xl md:text-xl lg:text-[22px] mb-2 text-black" style={{ fontFamily: '"Mulish", sans-serif' }}>{card.title}</h3>
+              <p className="text-gray-500 text-base md:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>{card.description}</p>
             </div>
           ))}
         </div>

@@ -47,7 +47,7 @@ const features = [
 
 const ControlPanelSection = () => {
   return (
-    <section className="w-full bg-[#FAFAFA] py-16 px-4 flex flex-col items-center">
+    <section className="w-full bg-[#FAFAFA] md:py-16 py-4 px-4 flex flex-col items-center">
       <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#13205A] mb-4">
         User-Friendly Control Panel
       </h2>

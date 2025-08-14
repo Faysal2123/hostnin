@@ -32,20 +32,19 @@ const sliderSettings = {
 };
 
 const WordpressReview: React.FC = () => {
- 
   return (
     <section className="bg-[#f8f8f9] md:pt-32 pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-2">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 mb-10">
           <div>
-            <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-[#03206B] mb-2 leading-tight">
+            <h2 className="font-bold text-[28px] sm:text-3xl md:text-4xl text-black mb-2 leading-tight">
               What&apos;s Our Clients Say&apos;s
             </h2>
-            <p className="text-gray-500 mb-4 max-w-xl text-sm sm:text-base">
-              Our migration service is free and quick. In most cases, we can have websites. Then click below to speak to our team.
+            <p className="text-gray-500 mb-4 max-w-xl text-base">
+              Our migration service is free and quick. In most cases, we can
+              have websites. Then click below to speak to our team.
             </p>
-            
           </div>
           {/* Average Rating Box */}
           <div className="bg-white rounded-lg shadow p-5 flex flex-col items-center min-w-[220px] border border-gray-100">
@@ -54,22 +53,28 @@ const WordpressReview: React.FC = () => {
             </div>
             <div className="flex items-center mb-1">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-green-500 text-xl mr-1">★</span>
+                <span key={i} className="text-green-500 text-xl mr-1">
+                  ★
+                </span>
               ))}
             </div>
-            <div className="text-gray-700 text-sm font-medium">4.9 Excellent 250 Review</div>
+            <div className="text-gray-700 text-sm font-medium">
+              4.9 Excellent 250 Review
+            </div>
           </div>
         </div>
         {/* Slider Section */}
         <Slider {...sliderSettings}>
           {reviews.map((review, idx) => (
             <div key={idx} className="px-2">
-              <div 
+              <div
                 className="bg-white rounded-lg shadow-sm p-8 flex flex-col justify-between h-[400px] group"
-                style={{
-                  '--scrollbar-width': 'none',
-                  '--ms-overflow-style': 'none',
-                } as React.CSSProperties}
+                style={
+                  {
+                    "--scrollbar-width": "none",
+                    "--ms-overflow-style": "none",
+                  } as React.CSSProperties
+                }
               >
                 <div className="flex items-center mb-4">
                   <div className="w-20 h-20 aspect-square rounded-full overflow-hidden mr-4 border-4 border-white shadow flex-shrink-0">
@@ -97,19 +102,29 @@ const WordpressReview: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <p 
-                  className="text-[#6b6b6b] text-sm md:text-base mb-8 overflow-y-auto flex-1 font-['Mulish',sans-serif]"
-                  style={{
-                    scrollbarWidth: 'none',
-                    ['-ms-overflow-style' as string]: 'none',
-                  } as React.CSSProperties}
+                <p
+                  className="text-[#6b6b6b] text-[15px] md:text-base mb-8 overflow-y-auto flex-1 font-['Mulish',sans-serif]"
+                  style={
+                    {
+                      scrollbarWidth: "none",
+                      ["-ms-overflow-style" as string]: "none",
+                    } as React.CSSProperties
+                  }
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.scrollbarWidth = 'auto';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'auto';
+                    const style = e.currentTarget
+                      .style as CSSStyleDeclaration & {
+                      msOverflowStyle?: string;
+                    };
+                    style.scrollbarWidth = "auto";
+                    style.msOverflowStyle = "auto";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.scrollbarWidth = 'none';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'none';
+                    const style = e.currentTarget
+                      .style as CSSStyleDeclaration & {
+                      msOverflowStyle?: string;
+                    };
+                    style.scrollbarWidth = "none";
+                    style.msOverflowStyle = "none";
                   }}
                 >
                   {review.review}

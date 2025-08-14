@@ -15,7 +15,12 @@ const getTimeLeft = (targetDate: Date) => {
 const DiscountBanner: React.FC = () => {
   const targetDate = useMemo(() => {
     const date = new Date();
-    date.setHours(date.getHours() + 12, date.getMinutes() + 54, date.getSeconds() + 32, 0);
+    date.setHours(
+      date.getHours() + 12,
+      date.getMinutes() + 54,
+      date.getSeconds() + 32,
+      0
+    );
     return date;
   }, []);
 
@@ -34,36 +39,55 @@ const DiscountBanner: React.FC = () => {
   return (
     <div className="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white px-2 md:px-4 py-2 md:py-6 text-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap">
+        
         {/* Left: Sale & Countdown */}
-        <div className="flex items-center gap-2 shrink-0">
-          <span className="font-semibold text-sm sm:text-base md:text-xl whitespace-nowrap">Black Friday Sale</span>
+        <div className="flex items-center md:gap-8 gap-2 shrink-0">
+          <div className="flex flex-col">
+            <span className="font-semibold text-xs sm:text-base md:text-xl whitespace-nowrap">
+              24-Hour Flash Sale!
+            </span>
+            <span className="hidden lg:block font-semibold text-sm sm:text-base md:text-lg whitespace-nowrap">
+              Get 80% off Hosting plans + free Domain & SSL!
+            </span>
+          </div>
           <div className="flex space-x-1">
             {["Hour", "Min", "Sec"].map((label, i) => {
-              const value = [timeLeft.hours, timeLeft.minutes, timeLeft.seconds][i];
+              const value = [
+                timeLeft.hours,
+                timeLeft.minutes,
+                timeLeft.seconds,
+              ][i];
               return (
                 <div
                   key={label}
-                  className="bg-white text-[#1a2340] rounded-md px-2 py-1 flex flex-col items-center min-w-[36px]"
+                  className="bg-white text-[#1a2340] rounded-md px-1 md:px-2 py-1 flex flex-col items-center min-w-[28px] sm:min-w-[36px]"
                 >
-                  <span className="font-bold text-sm md:text-lg">{String(value).padStart(2, "0")}</span>
-                  <span className="text-[10px]">{label}</span>
+                  <span className="font-bold text-xs sm:text-sm md:text-lg">
+                    {String(value).padStart(2, "0")}
+                  </span>
+                  <span className="text-[8px] sm:text-[10px]">{label}</span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* Center: Offer Text */}
-        <div className="hidden sm:block text-center flex-1">
-          <span className="font-semibold text-sm sm:text-base md:text-lg whitespace-nowrap">
-            Get 80% off Hosting plans + free Domain & SSL!
-          </span>
-        </div>
-
         {/* Right: View Details & Close */}
         <div className="flex items-center gap-2 shrink-0 ml-auto">
-          <button className="flex items-center text-xs sm:text-sm font-semibold whitespace-nowrap">
-            <span>View Details</span>
+          <button
+            onClick={() => {
+              const pricingSection =
+                document.getElementById("pricing-section");
+              if (pricingSection) {
+                pricingSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }}
+            className="flex items-center text-xs sm:text-sm font-semibold whitespace-nowrap"
+          >
+            View Details
             <svg
               className="ml-1 w-3 h-3 sm:w-4 sm:h-4"
               fill="none"
@@ -71,10 +95,19 @@ const DiscountBanner: React.FC = () => {
               strokeWidth="2"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
-          <button onClick={() => setShow(false)} aria-label="Close banner" className="text-white text-lg">
+
+          <button
+            onClick={() => setShow(false)}
+            aria-label="Close banner"
+            className="text-white text-lg"
+          >
             <AiOutlineClose size={16} />
           </button>
         </div>

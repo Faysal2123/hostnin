@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Web Hosting",
 };
 
-export default function Home() {
+export default function WebHostingPage() {
   return (
     <div className="min-h-screen">
       <DiscountBanner></DiscountBanner>

@@ -56,10 +56,10 @@ const SupportedScriptsCarousel: React.FC = () => {
           backgroundSize: "100% 100%",
         }}
       >
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 text-center text-[#06125a] pt-6 sm:pt-8 md:pt-10 px-3">
+        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 text-center text-black pt-6 sm:pt-8 md:pt-10 px-3">
           Our Supported Scripts
         </h2>
-        <p className="text-gray-700 font-medium mb-4 sm:mb-6 max-w-2xl mx-auto text-center text-xs sm:text-sm md:text-base px-3 sm:px-4">
+        <p className="text-gray-700 font-medium mb-4 sm:mb-6 max-w-2xl mx-auto text-center text-[15px] sm:text-sm md:text-base px-3 sm:px-4">
           Our platform allows you to run almost any script you need to run,
           except for cryptocurrency mining scripts.
         </p>
@@ -67,7 +67,7 @@ const SupportedScriptsCarousel: React.FC = () => {
           <button
             aria-label="Previous"
             onClick={handlePrev}
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#06125a] text-white text-sm sm:text-lg md:text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer flex items-center justify-center rounded-full bg-[#06125a] text-white text-sm sm:text-lg md:text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
           >
             &#8592;
           </button>
@@ -89,7 +89,7 @@ const SupportedScriptsCarousel: React.FC = () => {
                     className="object-contain w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
                   />
                 </div>
-                <div className="font-bold text-sm sm:text-base md:text-lg text-[#06125a] mt-1 sm:mt-2 text-center">
+                <div className="font-bold text-sm sm:text-base md:text-lg text-black mt-1 sm:mt-2 text-center">
                   {script.name}
                 </div>
               </div>
@@ -98,7 +98,7 @@ const SupportedScriptsCarousel: React.FC = () => {
           <button
             aria-label="Next"
             onClick={handleNext}
-            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#06125a] text-white text-sm sm:text-lg md:text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
+            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 cursor-pointer flex items-center justify-center rounded-full bg-[#06125a] text-white text-sm sm:text-lg md:text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
           >
             &#8594;
           </button>

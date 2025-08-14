@@ -3,20 +3,20 @@ import Image from 'next/image';
 
 const SupportTeamSection = () => {
   return (
-    <section className="pt-10 px-4" style={{ background: 'linear-gradient(278deg, #001DAC 16%, #000E57 98%)' }}>
+    <section className="pt-10 px-2" style={{ background: 'linear-gradient(278deg, #001DAC 16%, #000E57 98%)' }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Text Content */}
           <div className="text-white space-y-6">
             {/* Headline */}
             <div className="space-y-2">
-              <h2 className="text-xl text-center md:text-start lg:text-4xl font-bold leading-tight font-['Urbanist',sans-serif]">
+              <h2 className="text-[27px] text-center md:text-start lg:text-4xl font-bold leading-tight font-['Urbanist',sans-serif]">
                 Need Some Help?
               </h2>
-              <h3 className="text-xl text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
+              <h3 className="text-[27px] text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Call to get assist with
               </h3>
-              <h4 className="text-xl text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
+              <h4 className="text-[27px] text-center md:text-start lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Registering your Domains
               </h4>
             </div>

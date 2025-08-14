@@ -3,7 +3,7 @@ import { VpsPlan } from "../types/VpsPlan";
 export const vpsPlans: VpsPlan[] = [
   {
     name: "Starter",
-    price: 1999,
+    price: 2999,
     features: [
       {
         icon: "/cpu-icon.svg",

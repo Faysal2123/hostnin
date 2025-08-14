@@ -22,7 +22,7 @@ const StatsSection = () => {
   return (
     <section className="w-full flex justify-center items-center py-10 px-2 bg-[#f8f8f8]">
       <div className="w-full max-w-7xl rounded-2xl shadow-lg bg-gradient-to-br from-blue-800 to-blue-950 px-6 py-12 flex flex-col items-center">
-        <h2 className="text-white text-xl sm:text-2xl md:text-4xl font-semibold text-center mb-10">
+        <h2 className="text-white text-[26px] sm:text-2xl md:text-4xl font-bold text-center mb-10">
           Join a web Hosting Company that Started<br />Small & Scaled up
         </h2>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-12 w-full">

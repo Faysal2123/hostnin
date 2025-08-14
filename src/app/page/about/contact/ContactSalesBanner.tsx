@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactSalesBanner = () => {
   return (
-    <section className="w-full flex justify-center bg-transparent py-8 pt-[470px] lg:pt-42">
-      <div className="relative w-full max-w-7xl rounded-2xl bg-gradient-to-r from-[#00146b] to-[#0026b3] px-8 py-12 flex flex-col items-center shadow-xl overflow-hidden">
+    <section className="w-full flex justify-center bg-transparent py-8 pt-[480px] lg:pt-42">
+      <div className="relative w-full max-w-7xl md:rounded-2xl bg-gradient-to-r from-[#00146b] to-[#0026b3] px-8 py-10 flex flex-col items-center shadow-xl overflow-hidden">
         {/* Decorative circles */}
         <div className="absolute top-0 left-0 w-40 h-40 bg-blue-900/30 rounded-full -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full translate-x-1/4 translate-y-1/4 pointer-events-none" />

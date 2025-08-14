@@ -3,59 +3,80 @@ import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import pricingPlans from "../data/pricingPlans";
+import Image from "next/image";
 
 const tabClass = (active: boolean) =>
-  `px-3 sm:px-4 md:px-7 py-1.5 font-semibold text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
+  `px-3 sm:px-4 md:px-7 py-1.5 font-semibold cursor-pointer text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
     active ? "bg-[#0070f3] text-white" : "bg-transparent text-white"
   }`;
 
 const iconMap: Record<string, React.ReactNode> = {
   basic: (
-    <img
-      src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42.svg"
-      alt="Basic"
-      className="w-8 h-8"
-    />
+    <div className="w-8 h-8 relative">
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42.svg"
+        alt="Basic"
+        fill
+        className="object-contain"
+      />
+    </div>
   ),
   starter: (
-    <img
-      src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42.svg"
-      alt="Starter"
-      className="w-8 h-8"
-    />
+    <div className="w-8 h-8 relative">
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42.svg"
+        alt="Starter"
+        fill
+        className="object-contain"
+      />
+    </div>
   ),
   pro: (
-    <img
-      src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-44-1.svg"
-      alt="Pro"
-      className="w-8 h-8"
-    />
+    <div className="w-8 h-8 relative">
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-44-1.svg"
+        alt="Pro"
+        fill
+        className="object-contain"
+      />
+    </div>
   ),
   ultimate: (
-    <img
-      src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-45-1.svg"
-      alt="Ultimate"
-      className="w-8 h-8"
-    />
+    <div className="w-8 h-8 relative">
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-45-1.svg"
+        alt="Ultimate"
+        fill
+        className="object-contain"
+      />
+    </div>
   ),
 };
 
 const PricingSection = () => {
   const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
   const [showExpandedFeatures, setShowExpandedFeatures] = useState(false);
+   const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+
+  const handleTooltipClick = (i: number) => {
+    setActiveTooltip(i);
+    setTimeout(() => setActiveTooltip(null), 3000); // 3 seconds auto-hide
+  };
 
   const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
 
   return (
     <section
-      id="pricing-section"
-      data-section="pricing"
+      
+      
       className="pricing-scroll w-full flex flex-col items-center justify-center py-8 sm:py-10 md:py-14 lg:py-20 bg-[#f8f8f8] pt-8 md:pt-[500px] lg:pt-60 px-4 sm:px-6"
       style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
     >
       <div className="w-full max-w-7xl">
         <h2
-          className="pb-3 text-[25px] md:text-4xl lg:text-5xl font-bold text-[#232946] mb-2  md:mb-4 text-center "
+        id="pricing-section"
+        data-section="pricing"
+          className="pb-3 text-[25px] md:text-4xl lg:text-5xl font-bold text-slate-700 mb-2  md:mb-4 text-center "
           style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
         >
           Choose Your Perfect Plan
@@ -121,7 +142,7 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-start  sm:mt-16">
+        <div className="w-full flex flex-col lg:flex-row gap-10 sm:gap-10 justify-center items-start  sm:mt-16">
           {plans.map((plan) => (
             <div
               key={plan.title}
@@ -149,7 +170,7 @@ const PricingSection = () => {
 
               {plan.badge && (
                 <div
-                  className="absolute -top-3 sm:-top-6 right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-3 md:px-5 py-1.5 rounded-full shadow md:text-base"
+                  className="absolute -top-5 sm:-top-6 md:right-12 right-20 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold md:px-10 px-7 py-1.5 rounded-full shadow md:text-base"
                   style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                 >
                   {plan.badge}
@@ -227,21 +248,21 @@ const PricingSection = () => {
 
                 <div className="w-full mb-8">
                   <div className="mb-6">
-                    {(plan.title === "Basic" || plan.title === "Starter") && (
+                    {(plan.title === "Basic" ) && (
                       <div
                         className="bg-gray-100 rounded-lg p-3"
                         style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                       >
-                        <div className="bg-gray-400 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
+                        <div className="bg-gray-300 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
                           Special Gift
                         </div>
                         <p className="text-gray-500 text-xs">
-                          Lending page design and Facebook mastery course
+                          Landing page design and Facebook mastery course
                         </p>
                       </div>
                     )}
 
-                    {(plan.title === "Pro" || plan.title === "Ultimate") && (
+                    {(plan.title === "Pro" || plan.title === "Ultimate"|| plan.title === "Starter") && (
                       <div
                         className="bg-green-50 rounded-lg p-3"
                         style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
@@ -252,7 +273,7 @@ const PricingSection = () => {
                         <div className="flex items-center gap-1">
                           <span className="text-teal-500 text-sm">🎁</span>
                           <p className="text-gray-700 text-xs underline decoration-dotted md:text-xs">
-                            Lending page design and Facebook mastery course
+                            Landing page design and Facebook mastery course
                           </p>
                         </div>
                       </div>
@@ -266,31 +287,32 @@ const PricingSection = () => {
                     Features
                   </h4>
                   <div className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 group relative"
-                      >
-                        <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
-                          <FaCheck className="text-xs text-blue-600 font-bold" />
-                        </div>
-                        <span
-                          className="text-[15px] md:text-base text-gray-700 cursor-help font-medium"
-                          style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
-                        >
-                          {feature.text}
-                        </span>
-                        {feature.tooltip && (
-                          <div
-                            className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-xs rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-auto"
-                            style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
-                          >
-                            {feature.tooltip}
-                            <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                     {plan.features.map((feature: any, i: number) => (
+        <div
+          key={i}
+          className="flex items-center gap-3 group relative"
+          onClick={() => handleTooltipClick(i)} // Click for small devices
+        >
+          <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
+            <FaCheck className="text-xs text-blue-600 font-bold" />
+          </div>
+          <span className="text-[15px] md:text-base text-gray-700 cursor-help font-medium">
+            {feature.text}
+          </span>
+
+          {feature.tooltip && (
+            <div
+              className={`absolute left-0 top-full mt-2 z-50 w-60 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg
+                ${activeTooltip === i ? "opacity-100 visible" : "opacity-0 invisible"}
+                md:group-hover:opacity-100 md:group-hover:visible
+                transition-opacity duration-300 pointer-events-auto`}
+            >
+              {feature.tooltip}
+              <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
+            </div>
+          )}
+        </div>
+      ))}
 
                     {/* Show More */}
                     {showExpandedFeatures && plan.expandedFeatures && (
@@ -322,14 +344,14 @@ const PricingSection = () => {
                                         </div>
                                       )}
                                       <span
-                                        className="text-sm lg:text-base text-gray-700 cursor-help font-medium"
+                                        className="text-[15px] lg:text-base text-gray-700 cursor-help font-medium"
                                         style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                                       >
                                         {feature.text}
                                       </span>
                                       {feature.tooltip && (
                                         <div
-                                          className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-xs rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-auto"
+                                          className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-auto"
                                           style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                                         >
                                           {feature.tooltip}

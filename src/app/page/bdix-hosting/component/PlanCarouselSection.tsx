@@ -114,10 +114,10 @@ export default function PlanCarouselSection() {
   return (
     <section className="w-full flex flex-col items-center justify-center py-10 sm:py-16 bg-[#fafbfc] px-1 sm:px-2">
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-2 text-[#181c32]">
+        <h2 className="text-[22px] sm:text-3xl md:text-4xl font-bold text-center mb-2 text-[#181c32]">
           Are You Looking For Something Else?
         </h2>
-        <p className="text-gray-500 text-center mb-6 sm:mb-10 text-sm sm:text-lg">
+        <p className="text-gray-500 text-center mb-6 sm:mb-10 text-base sm:text-lg">
           Get started with your desired plan!
         </p>
         <Slider
@@ -138,24 +138,24 @@ export default function PlanCarouselSection() {
               <div key={idx} className="px-1 sm:px-2 py-8 sm:py-16 flex justify-center">
                 <div className={cardClass}>
                   <div className="mb-2 sm:mb-3">{plan.icon}</div>
-                  <h3 className="text-lg md:text-xl font-bold text-[#181c32] mb-1 sm:mb-2 font-['Urbanist',sans-serif]">
+                  <h3 className="text-xl md:text-xl font-bold text-[#181c32] mb-1 sm:mb-2 font-['Urbanist',sans-serif]">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-500 text-xs md:text-base mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px] text-justify font-['Mulish',sans-serif]">
+                  <p className="text-gray-500 text-[15px] md:text-base mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px] text-justify font-['Mulish',sans-serif]">
                     {plan.description}
                   </p>
                   <ul className="mb-4 sm:mb-6 space-y-1 sm:space-y-2 w-full">
                     {plan.features.map((feature, i) => (
                       <li
                         key={i}
-                        className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2"
+                        className="flex items-center text-sm sm:text-sm gap-1 sm:gap-2"
                       >
                         <FaCheck className="text-blue-500" />
                         <span className="text-black font-semibold font-['Mulish',sans-serif]">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-2 sm:mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 sm:px-6 py-2  transition text-sm sm:text-base w-full rounded-full">
+                  <button className="mt-2 sm:mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 sm:px-6 py-2  transition text-[15px] sm:text-base w-full rounded-full cursor-pointer">
                     {plan.button} <span className="ml-2">→</span>
                   </button>
                 </div>

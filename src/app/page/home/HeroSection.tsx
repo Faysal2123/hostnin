@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { FiArrowRight, FiDollarSign, FiCheckCircle } from "react-icons/fi";
+import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
 
 const HeroSection = () => {
   return (
     <section
-      className="relative overflow-hidden min-h-[70vh] md:min-h-[60vh] lg:min-h-screen"
+      className="relative overflow-hidden min-h-[60vh] md:min-h-[60vh] lg:min-h-[800px]"
       style={{
         background:
           "linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)",
@@ -15,15 +15,13 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center min-h-[50vh] md:min-h-[40vh] lg:min-h-[60vh]">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-1">
-           
-
             {/* Main Headline */}
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-[34px] sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight">
                 Best Web Hosting
                 <br />
                 <span className="relative">
-                   Company in Bangladesh
+                  Company in Bangladesh
                   <div className="absolute bottom-0 left-0 w-16 sm:w-20 lg:w-24 h-1 bg-yellow-400"></div>
                 </span>
               </h1>
@@ -31,12 +29,25 @@ const HeroSection = () => {
 
             {/* Body Text */}
             <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed max-w-4xl mx-auto lg:mx-0 text-justify">
-              At Hostnin, you'll discover top-notch web hosting solutions tailored for portfolios, e-commerce, and any type of website you can envision. Experience superior support, advanced features, and competitive pricing when you purchase web hosting from Bangladesh’s best hosting provider.
+              At Hostnin, you&apos;ll discover top-notch web hosting solutions
+              tailored for portfolios, e-commerce, and any type of website you
+              can envision. Experience superior support, advanced features, and
+              competitive pricing when you purchase web hosting from
+              Bangladesh’s best hosting provider.
             </p>
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-              <button className="w-full sm:w-auto bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base lg:text-[17px]">
+              <button onClick={() => {
+                const pricingSection =
+                  document.getElementById("pricing-section");
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }} className="w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base lg:text-[17px]">
                 Start My Hosting Now
                 <FiArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </button>

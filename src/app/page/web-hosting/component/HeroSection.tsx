@@ -45,15 +45,18 @@ const HeroSection = () => {
         backgroundSize: "contain, cover",
       }}
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-5">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between ">
         {/* Left Side */}
-        <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
+        <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0 pt-8 md:pt-0">
           <p className="text-yellow-400 font-bold mb-2 text-[16px] sm:text-xl">
-            Everything You Need to Create a Website
+            Expertly Crafted for Online Businesses
           </p>
-          <h1 className="text-[33px]  md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1
+            className="text-[34px]  md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6"
+            style={{ fontFamily: "var(--font-urbanist)" }}
+          >
             Get Fastest Hosting
-            <br/>
+            <br />
             Up to 76% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm sm:text-lg">
@@ -98,31 +101,34 @@ const HeroSection = () => {
                     )}
                   </div>
                   <div className="text-xs sm:text-sm font-medium leading-tight mt-1">
-                    {unit === "seconds" ? "Second" : unit.charAt(0).toUpperCase() + unit.slice(1)}
+                    {unit === "seconds"
+                      ? "Second"
+                      : unit.charAt(0).toUpperCase() + unit.slice(1)}
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-         <div className="px-4 md:px-0">
-           <button 
-            onClick={() => {
-              const pricingSection = document.getElementById('pricing-section');
-              if (pricingSection) {
-                pricingSection.scrollIntoView({ 
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-            }}
-            className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
-          >
-            <FaBolt className="text-lg animate-pulse" />
-            <span className="relative z-10">Claim Offer Now</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-          </button>
-         </div>
+          <div className="px-4 md:px-0">
+            <button
+              onClick={() => {
+                const pricingSection =
+                  document.getElementById("pricing-section");
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+              className="relative cursor-pointer bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2"
+            >
+              <FaBolt className="text-lg animate-pulse" />
+              <span className="relative z-10">Claim Offer Now</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+            </button>
+          </div>
         </div>
 
         {/* Right Side */}

@@ -35,11 +35,11 @@ const PerformanceAndSupportSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12">
           {/* Text */}
           <div className="flex-1 max-w-xl order-2 md:order-1">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#0a174e] mb-3 sm:mb-4">
+            <h2 className="text-[25px] sm:text-3xl md:text-5xl font-bold text-[#0a174e] mb-3 sm:mb-4">
               We Offers Lighting Fast<br />
               Loading Speed
             </h2>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px] text-justify">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-[17px] text-justify">
               Speed is one of the most basic but powerful features that you will get instantly with your Shared hosting package. A fast loading website ensures that your competitor are not able to snatch your potential customers.
             </p>
             <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
@@ -48,13 +48,13 @@ const PerformanceAndSupportSection = () => {
                   <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <FaCheck className="w-2 h-2 text-white" />
                   </div>
-                  <span className='font-semibold'>{feature}</span>
+                  <span className='font-semibold text-[15px] md:text-base'>{feature}</span>
                 </li>
               ))}
             </ul>
             <button 
               onClick={scrollToFeatureCards}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 sm:px-8 py-2.5 sm:py-4 rounded-full transition-colors text-sm sm:text-base"
+              className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-colors text-sm sm:text-base"
             >
               See Pricing
             </button>
@@ -75,7 +75,7 @@ const PerformanceAndSupportSection = () => {
         {/* Support Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12">
           {/* Image */}
-          <div className="flex-[0.9] flex justify-center w-full md:w-[450px] order-1">
+          <div className="flex-1 flex justify-center w-full md:w-[450px] order-1">
             <Image
               src="https://i.ibb.co/FbGFz0zH/customer-support-3-2048x1745.webp"
               alt="Support Illustration"
@@ -87,12 +87,12 @@ const PerformanceAndSupportSection = () => {
           </div>
           
           {/* Text */}
-          <div className="flex-[1.2] max-w-3xl order-2">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#0a174e] mb-3 sm:mb-4">
-              Let us take worries away & put<br />
-              time back in your day
+          <div className="flex-1 max-w-3xl order-2">
+            <h2 className="text-[25px] sm:text-3xl md:text-5xl font-bold text-[#0a174e] mb-3 sm:mb-4">
+              Let us take worries away & <br />
+              put time back in your day
             </h2>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px] text-justify">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-[17px] text-justify">
               We offer expert 24/7/365 problem-solving for everyone. For a closer partnership, choose the Advanced Support add-on that enhances your support experience or the Premium Support add-on where our Senior Support Engineers work as an extension of your in-house team.
             </p>
             <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
@@ -101,13 +101,13 @@ const PerformanceAndSupportSection = () => {
                   <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <FaCheck className="w-2 h-2 text-white" />
                   </div>
-                  <span className='font-semibold text-sm sm:text-base'>{feature.text}</span>
+                  <span className='font-semibold text-[15px] sm:text-base'>{feature.text}</span>
                 </li>
               ))}
             </ul>
             <button 
               onClick={scrollToFeatureCards}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 sm:px-8 py-2.5 sm:py-4 rounded-full transition-colors text-sm sm:text-base"
+              className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-colors text-sm sm:text-base"
             >
               See Pricing
             </button>

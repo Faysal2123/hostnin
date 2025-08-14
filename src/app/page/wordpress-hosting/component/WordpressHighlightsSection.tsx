@@ -93,8 +93,8 @@ const WordpressHighlightsSection = () => {
                 </div>
               )}
 
-              <h3 className="text-xl md:text-[22px] font-bold text-[#03206B] mb-2 font-['Urbanist',sans-serif]">{item.title}</h3>
-              <p className="text-gray-600 text-sm md:text-base font-normal font-['Mulish',sans-serif]">{item.description}</p>
+              <h3 className="text-2xl md:text-[22px] font-bold text-[#03206B] mb-2 font-['Urbanist',sans-serif]">{item.title}</h3>
+              <p className="text-gray-600 text-[15px] md:text-base font-normal font-['Mulish',sans-serif]">{item.description}</p>
             </div>
           ))}
         </div>

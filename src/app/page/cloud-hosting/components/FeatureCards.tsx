@@ -44,15 +44,15 @@ const FeatureCards = () => {
       }}
     >
       <div className="flex flex-col items-center pt-6 sm:pt-8 lg:pt-10 px-3 sm:px-4">
-        <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4" style={{ fontFamily: '"Mulish", sans-serif' }}>
+        <h1 className="text-center text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4" style={{ fontFamily: '"Mulish", sans-serif' }}>
           What are Specials?
         </h1>
-        <p className='text-gray-500 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto mb-6 sm:mb-8 text-sm sm:text-base lg:text-lg px-3 sm:px-4' style={{ fontFamily: '"Mulish", sans-serif' }}>You&apos;ll get more resources for less money with our plans, so you can count on their reliability. It&apos;s easier than you think to start your own website with Hostnin!  </p>
+        <p className='text-gray-500 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl text-center mx-auto mb-6 sm:mb-8 text-[15px] sm:text-base lg:text-lg px-3 sm:px-4' style={{ fontFamily: '"Mulish", sans-serif' }}>You&apos;ll get more resources for less money with our plans, so you can count on their reliability. It&apos;s easier than you think to start your own website with Hostnin!  </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl w-full px-3 sm:px-4 pb-6 sm:pb-8 lg:pb-20">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg border border-gray-200 shadow-sm p-4 sm:p-6 lg:p-8 flex flex-col hover:shadow-md transition"
+              className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 sm:p-6 lg:p-8 flex flex-col hover:shadow-md transition"
               style={{ fontFamily: '"Mulish", sans-serif' }}
             >
               {/* Icon and Title Side by Side */}
@@ -66,12 +66,12 @@ const FeatureCards = () => {
                     className="text-blue-600 w-8 h-8 sm:w-10 sm:h-12"
                   />
                 </div>
-                <h3 className="font-bold text-lg md:text-[22px] text-gray-900" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                <h3 className="font-bold text-xl md:text-[22px] text-gray-900" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                   
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed font-semibold" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.desc}</p>
+              <p className="text-gray-600 text-[15px] md:text-base leading-relaxed font-semibold" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.desc}</p>
             </div>
           ))}
         </div>

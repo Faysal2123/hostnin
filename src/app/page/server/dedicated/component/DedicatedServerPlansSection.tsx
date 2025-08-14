@@ -1,6 +1,7 @@
 import React from 'react';
 import { dedicatedServerPlans } from '../data/dedicatedServerPlans';
 import { FaNetworkWired, FaMicrochip, FaHdd, FaTachometerAlt, FaExchangeAlt, FaCogs, FaGlobe, FaWindows } from 'react-icons/fa';
+import Link from 'next/link';
 
 const featureHighlights = [
   {
@@ -27,7 +28,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const DedicatedServerPlansSection: React.FC = () => {
   return (
-    <section className="w-full flex flex-col items-center justify-center py-12 bg-[#f8f8f8] px-4 ">
+    <section className="w-full flex flex-col items-center justify-center py-12 bg-[#f8f8f8] px-2 ">
       <div className="w-full max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black font-['Urbanist',sans-serif]">Dedicated CPU Hosting plans<br />and Pricing</h2>
         <div className="mb-10"></div>
@@ -61,9 +62,9 @@ const DedicatedServerPlansSection: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full">
-                <button className="bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-6 py-3 rounded-full shadow hover:scale-105 transition-transform text-lg font-['Urbanist',sans-serif]">
+                <Link href="https://my.hostnin.com/index.php/store/dedicated-server/i5?_gl=1*2dc16d*_ga*MTM5MjE0NjQ3NC4xNzUyMDg2NTE0*_ga_8HH0WPJEP1*czE3NTUxMTM4NjAkbzcxJGcxJHQxNzU1MTE1MzczJGo1OSRsMCRoMA..*_fplc*Y1hOYjRHNUxJMCUyQllTMnZSc3ByRDJGSWwlMkYlMkI2VnRmYXFkQlE0VW9oMFVpVjRuOEJDRVRSS083ZkRGMlZndVFTWEZkcEJlREpVZ0tuVDNBclZHRWtVdDlScThKVW1kQ1ZLb3RzUzZrVFhqRDluWlZDSyUyRnZvY2tNOVJWOTVNM1ElM0QlM0Q.*_gcl_aw*R0NMLjE3NTUwNjk1MzMuQ2owS0NRand6T3ZFQmhEVkFSSXNBREhmSkpTdzQ1OE9IeGhVVlZlbDhSclBNSXRaZEczMmN5RHJSZUg2dUNQNzhDdmNsVkQ2NDlHWE84UWFBa1lxRUFMd193Y0I.*_gcl_au*ODY3NTcxMjA1LjE3NTIwODY1MTQ.*_ga_T6J46ZTKYW*czE3NTUxMTM4NjAkbzcyJGcxJHQxNzU1MTE1MzcyJGo2MCRsMCRoMTQ2NDI4NjAyOQ.." className="bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-6 py-3 rounded-full shadow hover:scale-105 transition-transform text-lg font-['Urbanist',sans-serif]">
                   {plan.buttonText || 'Purchase Now'}
-                </button>
+                </Link>
                 <div className="flex items-center gap-2">
                   <span className="text-pink-600 font-bold text-3xl md:text-3xl font-['Urbanist',sans-serif]">৳{plan.price.toLocaleString()}</span>
                   <span className="text-slate-900 text-lg font-['Urbanist',sans-serif]">/monthly</span>

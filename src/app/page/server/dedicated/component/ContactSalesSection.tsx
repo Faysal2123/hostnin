@@ -14,7 +14,7 @@ const ContactSalesSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
               <a href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" target="_blank" rel="noopener noreferrer">
-                <button className="hover:scale-105 bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:scale-105 transition-transform" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                <button className="hover:scale-105 bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-8 py-4 rounded-lg shadow-md transition-transform" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                   Live Chat With Sales
                 </button>
               </a>
@@ -22,7 +22,7 @@ const ContactSalesSection = () => {
                 <span className="flex items-center justify-center w-14 h-14 rounded-full bg-white text-[#001B8A] text-2xl shadow-md">
                   <HiPhone className="w-7 h-7" />
                 </span>
-                <span className="text-xl md:text-xl font-bold text-white select-all  transition-transform" style={{ fontFamily: '"Urbanist", sans-serif' }}>+880 1325-875955</span>
+                <span className="text-lg md:text-xl font-bold text-white select-all  transition-transform" style={{ fontFamily: '"Urbanist", sans-serif' }}>+880 1325-875955</span>
               </div>
             </div>
           </div>

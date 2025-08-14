@@ -5,7 +5,7 @@ import { FaCheck, FaTimes } from "react-icons/fa";
 import pricingPlans from "../data/pricingPlans";
 
 const tabClass = (active: boolean) =>
-  `px-3 sm:px-4 md:px-7 py-1.5 font-semibold text-sm sm:text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
+  `px-3 sm:px-4 md:px-7 py-1.5 cursor-pointer font-semibold text-sm sm:text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
     active ? "bg-[#0070f3] text-white" : "bg-transparent text-white"
   }`;
 
@@ -36,6 +36,12 @@ const iconMap: Record<string, React.ReactNode> = {
 const PricingSection = () => {
   const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
   const [showExpandedFeatures, setShowExpandedFeatures] = useState(false);
+   const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+
+  const handleTooltipClick = (i: number) => {
+    setActiveTooltip(i);
+    setTimeout(() => setActiveTooltip(null), 3000); // 3 seconds auto-hide
+  };
 
   const plans = pricingPlans.filter(
     (plan) => plan.billingPeriod === billing && plan.title !== "Basic"
@@ -43,12 +49,12 @@ const PricingSection = () => {
 
   return (
     <section
-      id="pricing-section"
+      
       className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] pt-8 md:pt-[550px] lg:pt-60 px-3 sm:px-6"
       style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
     >
       <div className="w-full max-w-7xl">
-        <h2
+        <h2 id="pricing-section"
           className="text-[25px] md:text-4xl lg:text-5xl font-bold text-[#232946] mb-5 md:mb-6 text-center"
           style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
         >
@@ -115,7 +121,7 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-center items-start mt-8 sm:mt-12 md:mt-16">
+        <div className="w-full flex flex-col lg:flex-row gap-10 sm:gap-8 md:gap-10 justify-center items-start mt-8 sm:mt-12 md:mt-16">
           {plans.map((plan) => (
             <div
               key={plan.title}
@@ -139,7 +145,7 @@ const PricingSection = () => {
 
               {plan.badge && (
                 <div
-                  className="absolute -top-3 md:-top-6 right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold px-5 py-1.5 rounded-full shadow md:text-base"
+                  className="absolute -top-5 md:-top-7 md:right-20 right-24 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold md:px-14 px-7 py-1.5 rounded-full shadow md:text-base"
                   style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                 >
                   {plan.badge}
@@ -197,7 +203,7 @@ const PricingSection = () => {
                   )}
 
                   <button
-                    className={`w-full py-4 px-6 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer transform hover:scale-105 ${
+                    className={`w-full py-4 px-6  rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer transform hover:scale-105 ${
                       plan.highlight
                         ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl"
                         : "bg-white text-blue-600 border-2 border-blue-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 hover:text-white hover:border-transparent shadow-md hover:shadow-lg"
@@ -248,34 +254,38 @@ const PricingSection = () => {
                   </div>
 
                   <h4
-                    className="font-bold text-gray-800 mb-4 text-sm md:text-xl"
+                    className="font-bold text-gray-800 mb-4 text-lg md:text-xl"
                     style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                   >
                     Features
                   </h4>
                   <div className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-3 group relative">
-                        <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
-                          <FaCheck className="text-xs text-blue-600 font-bold" />
-                        </div>
-                        <span
-                          className="text-sm md:text-base text-gray-700 cursor-help font-medium"
-                          style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
-                        >
-                          {feature.text}
-                        </span>
-                        {feature.tooltip && (
-                          <div
-                            className="absolute left-0 top-8 z-50 w-80 bg-blue-600 text-white text-sm rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none"
-                            style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
-                          >
-                            {feature.tooltip}
-                            <div className="absolute -top-1 left-4 w-2 h-2 bg-blue-600 transform rotate-45"></div>
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                     {plan.features.map((feature: any, i: number) => (
+        <div
+          key={i}
+          className="flex items-center gap-3 group relative"
+          onClick={() => handleTooltipClick(i)} // Click for small devices
+        >
+          <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
+            <FaCheck className="text-xs text-blue-600 font-bold" />
+          </div>
+          <span className="text-[15px] md:text-base text-gray-700 cursor-help font-medium">
+            {feature.text}
+          </span>
+
+          {feature.tooltip && (
+            <div
+              className={`absolute left-0 top-full mt-2 z-50 w-60 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg
+                ${activeTooltip === i ? "opacity-100 visible" : "opacity-0 invisible"}
+                md:group-hover:opacity-100 md:group-hover:visible
+                transition-opacity duration-300 pointer-events-auto`}
+            >
+              {feature.tooltip}
+              <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
+            </div>
+          )}
+        </div>
+      ))}
 
                     {/* Show More */}
                     {showExpandedFeatures && plan.expandedFeatures && (
@@ -284,7 +294,7 @@ const PricingSection = () => {
                           (category) => (
                             <div key={category} className="mt-6">
                               <h5
-                                className="font-bold text-gray-800 mb-3 lg:text-lg capitalize bg-gray-50 px-3 py-2 rounded-lg"
+                                className="font-bold text-gray-800 mb-3 text-lg lg:text-xl capitalize bg-gray-50 px-3 py-2 rounded-lg"
                                 style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                               >
                                 {category}
@@ -307,14 +317,14 @@ const PricingSection = () => {
                                         </div>
                                       )}
                                       <span
-                                        className="text-sm lg:text-base text-gray-700 cursor-help font-medium"
+                                        className="text-[15px] lg:text-base text-gray-700 cursor-help font-medium"
                                         style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                                       >
                                         {feature.text}
                                       </span>
                                       {feature.tooltip && (
                                         <div
-                                          className="absolute left-0 top-8 z-50 w-80 bg-blue-600 text-white text-sm rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none"
+                                          className="absolute left-0 top-8 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none"
                                           style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                                         >
                                           {feature.tooltip}

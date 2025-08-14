@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import { IoMdArrowDropdown } from "react-icons/io";
 import pricingPlans from "@/app/page/web-hosting/data/pricingPlans";
+import Image from "next/image";
 
 const tabClass = (active: boolean) =>
   `px-3 sm:px-4 md:px-6 py-1 font-semibold text-xs sm:text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
@@ -12,28 +13,34 @@ const tabClass = (active: boolean) =>
 const iconMap: Record<string, React.ReactNode> = {
   starter: (
     <span className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10">
-      <img 
+      <Image 
         src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42-1.svg" 
         alt="Starter Plan Icon" 
-        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+        width={24} 
+        height={24} 
+        className="sm:w-5 sm:h-5 md:w-6 md:h-6"
       />
     </span>
   ),
   pro: (
     <span className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10">
-      <img 
+      <Image 
         src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-45.svg" 
         alt="Pro Plan Icon" 
-        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+        width={24} 
+        height={24} 
+        className="sm:w-5 sm:h-5 md:w-6 md:h-6"
       />
     </span>
   ),
   ultimate: (
     <span className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10">
-      <img 
+      <Image 
         src="https://hostnin.com/wp-content/uploads/2024/04/svgexport-42-1.svg" 
         alt="Ultimate Plan Icon" 
-        className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+        width={24} 
+        height={24} 
+        className="sm:w-5 sm:h-5 md:w-6 md:h-6"
       />
     </span>
   ),

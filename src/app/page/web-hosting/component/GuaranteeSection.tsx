@@ -46,11 +46,11 @@ const GuaranteeSection = () => {
       <div className="guarantee-section max-w-7xl mx-auto">
         <div className="guarantee-bg guarantee-bg-left" />
         <div className="guarantee-bg guarantee-bg-right" />
-        <div className="guarantee-content text-center">
+        <div className="guarantee-content text-center p-3">
           <h2 className="guarantee-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             30 day <span>Money-back Guarantee</span>
           </h2>
-          <p className="guarantee-subtitle text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+          <p className="guarantee-subtitle text-sm sm:text-base md:text-lg max-w-2xl mx-auto ">
             There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund.
           </p>
           <div className="guarantee-features flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center items-center mt-6 sm:mt-8">

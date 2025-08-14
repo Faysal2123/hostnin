@@ -20,7 +20,7 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards, bottom = "-180px" })
       className="absolute left-1/2 transform -translate-x-1/2 z-20 w-full max-w-7xl"
       style={{ bottom, fontFamily: '"Mulish", sans-serif' }}
     >
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch">
+      <div className="flex flex-col sm:flex-row gap-10 sm:gap-6 justify-center items-stretch">
         {cards.map((card) => (
           <div
             key={card.title}

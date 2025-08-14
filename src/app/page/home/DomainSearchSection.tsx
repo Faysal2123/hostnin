@@ -20,7 +20,7 @@ export default function DomainSearchSection() {
             className="flex flex-row mb-6 max-w-xs md:max-w-md lg:max-w-xl"
             action="https://my.hostnin.com/cart.php?a=add&domain=register"
             method="post"
-            target="_blank" // চাইলে নতুন ট্যাবে খুলবে
+            target="_blank" 
             onSubmit={(e) => {
               if (domain.trim() === "") {
                 e.preventDefault();
@@ -38,7 +38,7 @@ export default function DomainSearchSection() {
             />
             <button
               type="submit"
-              className="flex items-center justify-center gap-1 sm:gap-2 bg-gradient-to-r from-[#0A8AFF] to-[#3B82F6] text-white font-semibold text-sm sm:text-base px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-md hover:opacity-90 transition"
+              className="flex items-center justify-center cursor-pointer gap-1 sm:gap-2 bg-gradient-to-r from-[#0A8AFF] to-[#3B82F6] text-white font-semibold text-sm sm:text-base px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-md hover:opacity-90 transition"
             >
               <svg
                 width="18"
@@ -58,14 +58,14 @@ export default function DomainSearchSection() {
               Search
             </button>
           </form>
-          <div className="flex gap-6 flex-wrap">
+          <div className="flex md:gap-6 gap-4 flex-wrap">
             {domainPrices.map(({ ext, price, color }: DomainPrice) => (
-              <div key={ext} className="text-start min-w-[80px]">
+              <div key={ext} className="text-start md:min-w-[80px] min-w-[50px]">
                 <span className={`font-bold text-xl sm:text-2xl ${color}`}>
                   {ext}
                 </span>
                 <br />
-                <span className="text-gray-600 font-medium text-sm">
+                <span className="text-gray-600 font-medium text-xs md:text-base">
                   {price}/Year
                 </span>
               </div>

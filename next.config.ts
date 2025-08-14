@@ -17,6 +17,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/web-hosting',
+        destination: '/page/web-hosting', 
+      },
+      {
+        source: '/contact',
+        destination: '/page/about/contact', 
+      },
+    ];
+  },
 };
 
 export default nextConfig;

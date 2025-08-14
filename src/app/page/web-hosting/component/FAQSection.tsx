@@ -21,6 +21,8 @@ const FAQSection: React.FC = () => {
       ...prev,
       [selectedCategory]: prev[selectedCategory] === index ? null : index,
     }));
+
+    // Smooth scroll into view after opening
     setTimeout(() => {
       const ref = questionRefs.current[index];
       if (ref) {
@@ -29,17 +31,18 @@ const FAQSection: React.FC = () => {
           ref.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-    }, 300); // transition duration এর চেয়ে একটু বেশি
+    }, 300);
   };
 
   const category = faqData.find((cat) => cat.id === selectedCategory);
 
   return (
-    <section className="w-full pb-40 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6"
-      style={{ overflowAnchor: 'none' }}
+    <section
+      className="w-full pb-40 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6"
+      style={{ overflowAnchor: "none" }}
     >
       <div className="pb-8 text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2d3ecb] mb-2">
+        <h2 className="text-[28px] sm:text-3xl md:text-4xl font-bold text-black mb-2">
           FAQs: Your questions, our answers
         </h2>
         <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto">
@@ -56,7 +59,7 @@ const FAQSection: React.FC = () => {
             return (
               <button
                 key={cat.id}
-                className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-5 text-sm sm:text-base font-semibold transition-all duration-200 rounded-md
+                className={`flex items-center cursor-pointer gap-3 sm:gap-4 px-4 sm:px-6 py-5 text-sm sm:text-base font-semibold transition-all duration-200 rounded-md
                   ${isActive ? "bg-[#2250F4] text-white" : "bg-white text-black hover:bg-[#f0f4ff]"}
                 `}
                 style={{
@@ -71,15 +74,18 @@ const FAQSection: React.FC = () => {
                 >
                   <Icon className={`text-xl ${isActive ? "text-[#2250F4]" : "text-[#2250F4]"}`} />
                 </span>
-                <span className="text-sm md:text-lg font-bold" style={{ fontFamily: '"Urbanist", sans-serif' }}>{cat.title}</span>
+                <span className="text-lg md:text-lg font-bold" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                  {cat.title}
+                </span>
               </button>
             );
           })}
         </div>
 
         {/* FAQ Content */}
-        <div className="flex-1 bg-white rounded-xl shadow-md p-6 sm:p-8 min-h-[500px] w-full"
-          style={{ overflowAnchor: 'auto' }}
+        <div
+          className="flex-1 bg-white rounded-xl shadow-md p-6 sm:p-6 min-h-[470px] w-full"
+          style={{ overflowAnchor: "auto" }}
         >
           {category && (
             <>
@@ -88,30 +94,42 @@ const FAQSection: React.FC = () => {
                 return (
                   <div
                     key={faq.question}
-                    ref={el => { questionRefs.current[idx] = el; }}
+                    ref={(el) => {
+                      questionRefs.current[idx] = el;
+                    }}
                     className="border-b border-[#e6e6e6] last:border-b-0"
                   >
                     <div
                       className="flex items-center justify-between cursor-pointer py-4"
                       onClick={() => handleToggle(idx)}
                     >
-                      <h4 className="text-sm sm:text-base font-bold text-[#222]" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                      <h4
+                        className="text-[17px] sm:text-base font-bold text-[#222]"
+                        style={{ fontFamily: '"Urbanist", sans-serif' }}
+                      >
                         {faq.question}
                       </h4>
                       <span className="text-xl sm:text-2xl text-[#2250F4]">
                         {isOpen ? <FiMinus /> : <FiPlus />}
                       </span>
                     </div>
-                    {isOpen && (
-                      <div
-                        className="transition-all duration-300 ease-in-out overflow-hidden"
-                        style={{ maxHeight: isOpen ? 500 : 0 }}
+
+                    {/* Smooth transition for answer */}
+                    <div
+                      className="overflow-hidden transition-all duration-300 ease-in-out"
+                      style={{
+                        maxHeight: isOpen && questionRefs.current[idx]
+                          ? questionRefs.current[idx].scrollHeight + 20
+                          : 0,
+                      }}
+                    >
+                      <p
+                        className="mb-4 text-gray-600 text-[15px] sm:text-base leading-relaxed whitespace-pre-line"
+                        style={{ fontFamily: '"Mulish", sans-serif' }}
                       >
-                        <p className="mb-4 text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line" style={{ fontFamily: '"Mulish", sans-serif' }}>
-                          {faq.answer}
-                        </p>
-                      </div>
-                    )}
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 );
               })}

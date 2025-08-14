@@ -37,7 +37,7 @@ const ReviewSection: React.FC = () => {
         <Slider {...sliderSettings}>
           {reviews.map((review, idx) => (
             <div key={idx} className="px-2">
-              <div 
+              <div
                 className="bg-white rounded-lg shadow-sm p-8 flex flex-col justify-between h-[400px] group"
                 style={{
                   '--scrollbar-width': 'none',
@@ -50,35 +50,37 @@ const ReviewSection: React.FC = () => {
                       src={review.image}
                       alt={review.name}
                       width={72}
-              height={72}
-              className="rounded-full  object-cover aspect-square"
+                      height={72}
+                      className="rounded-full object-cover aspect-square"
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-[#1a2343]" style={{ fontFamily: 'var(--font-mulish)' }}>
+                    <h3
+                      className="font-bold text-lg text-[#1a2343]"
+                      style={{ fontFamily: 'var(--font-mulish)' }}
+                    >
                       {review.name}
                     </h3>
-                    <div className="flex text-[#f7b500] mt-1 ">
+                    <div className="flex text-[#f7b500] mt-1">
                       {[...Array(review.rating)].map((_, i) => (
                         <FaStar key={i} />
                       ))}
                     </div>
                   </div>
                 </div>
-                <p 
-                  className="text-[#6b6b6b] text-sm md:text-base mb-8 overflow-y-auto flex-1 text-justify"
+                <p
+                  className="text-[#6b6b6b] text-[15px] md:text-base mb-8 overflow-y-auto flex-1 text-justify"
                   style={{
                     scrollbarWidth: 'none',
-                    ['-ms-overflow-style' as string]: 'none',
                     fontFamily: 'var(--font-mulish)',
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'auto';
-                    (e.currentTarget.style as any).msOverflowStyle = 'auto';
+                    (e.currentTarget.style as CSSStyleDeclaration & { msOverflowStyle?: string }).msOverflowStyle = 'auto';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'none';
-                    (e.currentTarget.style as any).msOverflowStyle = 'none';
+                    (e.currentTarget.style as CSSStyleDeclaration & { msOverflowStyle?: string }).msOverflowStyle = 'none';
                   }}
                 >
                   {review.review}

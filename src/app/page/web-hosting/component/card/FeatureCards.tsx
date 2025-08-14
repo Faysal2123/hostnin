@@ -8,7 +8,7 @@ interface FeatureCardsProps {
 
 const FeatureCards = ({ cards, bottom = "-180px" }: FeatureCardsProps) => (
   <div
-    className="absolute left-1/2 transform -translate-x-1/2 z-20 w-full max-w-7xl px-4 sm:px-6"
+    className="absolute left-1/2 transform -translate-x-1/2 z-20 w-full max-w-7xl px-4 sm:px-0"
     style={{ bottom, fontFamily: '"Mulish", sans-serif' }}
   >
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-stretch">

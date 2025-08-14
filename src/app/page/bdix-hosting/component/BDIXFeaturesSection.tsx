@@ -72,7 +72,7 @@ const BDIXFeaturesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl hover:shadow-blue-500/25 hover:scale-110 transition-all duration-300 min-h-[200px] py-12"
+              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl  hover:scale-110 transition-all duration-300 min-h-[200px] py-12"
             >
               <div className="mb-4 text-5xl">{feature.icon}</div>
               <h3 className="font-bold text-xl mb-2 text-[#232946] font-['Urbanist',sans-serif]">{feature.title}</h3>

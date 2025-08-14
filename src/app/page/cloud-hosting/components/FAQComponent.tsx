@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaDashcube, FaHeadphonesAlt, FaServer } from "react-icons/fa";
 import { FaArtstation } from "react-icons/fa6";
 import { RiShoppingCart2Fill } from "react-icons/ri";
 
-// FAQ data structure with category icons
 const faqData = [
   {
     category: "General Questions",
@@ -169,6 +168,7 @@ const faqData = [
 const FAQComponent: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [openIndexes, setOpenIndexes] = useState<number[]>(faqData.map(() => 0));
+  const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleTabClick = (idx: number) => {
     setSelectedTab(idx);
@@ -180,18 +180,29 @@ const FAQComponent: React.FC = () => {
         tabIdx === selectedTab ? (openIdx === faqIdx ? -1 : faqIdx) : openIdx
       )
     );
+
+    // Smooth scroll into view
+    setTimeout(() => {
+      const ref = answerRefs.current[faqIdx];
+      if (ref) {
+        const rect = ref.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+          ref.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }, 300);
   };
 
   const currentFaqs = faqData[selectedTab].faqs;
 
   return (
     <div className="bg-[#f8f8f9]">
-      <div className="w-full max-w-7xl mx-auto py-6 sm:py-8 lg:py-10 pt-12 sm:pt-16 lg:pt-20 px-3 sm:px-4">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-2 text-blue-700">
+      <div className="w-full max-w-7xl mx-auto py-6 sm:py-8 lg:py-10 pt-12 sm:pt-16 lg:pt-20 px-3 sm:px-4 ">
+        <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-center mb-2 text-blue-700">
           FAQs: Your questions, our answers
         </h2>
-        <p className="text-center text-gray-500 mb-6 sm:mb-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto text-sm sm:text-base px-3 sm:px-4">
-        Here you will find answers to the most frequently asked questions. If you still need assistance, feel free to ask our live support team. 
+        <p className="text-center text-gray-500 mb-6 sm:mb-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto text-[15px] sm:text-base px-3 sm:px-4">
+          Here you will find answers to the most frequently asked questions. If you still need assistance, feel free to ask our live support team.
         </p>
 
         {/* Tab Buttons */}
@@ -199,7 +210,7 @@ const FAQComponent: React.FC = () => {
           {faqData.map((tab, idx) => (
             <button
               key={tab.category}
-              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-md font-semibold transition-colors duration-200 focus:outline-none text-xs sm:text-sm lg:text-base ${
+              className={`flex items-center cursor-pointer gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-md font-semibold transition-colors duration-200 focus:outline-none text-base sm:text-sm lg:text-base ${
                 selectedTab === idx
                   ? "bg-blue-600 text-white shadow-[0_0_40px_16px_rgba(59,130,246,0.32)]"
                   : "bg-white text-black"
@@ -207,37 +218,46 @@ const FAQComponent: React.FC = () => {
               onClick={() => handleTabClick(idx)}
             >
               <span className="text-sm sm:text-base lg:text-xl">{tab.icon}</span>
-              <span className="hidden sm:inline" style={{ fontFamily: '"Urbanist", sans-serif' }}>{tab.category}</span>
-              <span className="sm:hidden" style={{ fontFamily: '"Urbanist", sans-serif' }}>{tab.category.split(' ')[0]}</span>
+              <span className="hidden sm:inline" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                {tab.category}
+              </span>
+              <span className="sm:hidden" style={{ fontFamily: '"Urbanist", sans-serif' }}>
+                {tab.category.split(' ')[0]}
+              </span>
             </button>
           ))}
         </div>
 
         {/* Accordion Section */}
         <div className="bg-white shadow-lg p-4 sm:p-6 lg:p-8">
-          {currentFaqs.map((faq, idx) => (
-            <div
-              key={faq.question}
-              className="border-b last:border-b-0 border-gray-200"
-            >
-              <button
-                className="w-full flex justify-between items-center py-3 sm:py-4 lg:py-5 text-left focus:outline-none"
-                onClick={() => handleAccordionClick(idx)}
-              >
-                <span className="font-bold text-sm md:text-base   text-gray-900 pr-2 sm:pr-4 font-sans">
-                  {faq.question}
-                </span>
-                <span className="text-xl sm:text-2xl text-blue-700 flex-shrink-0">
-                  {openIndexes[selectedTab] === idx ? "−" : "+"}
-                </span>
-              </button>
-              {openIndexes[selectedTab] === idx && (
-                <div className="pb-3 sm:pb-4 lg:pb-5 text-gray-700 text-sm sm:text-base animate-fade-in" style={{ fontFamily: '"Mulish", sans-serif' }}>
-                  {faq.answer}
+          {currentFaqs.map((faq, idx) => {
+            const isOpen = openIndexes[selectedTab] === idx;
+            return (
+              <div key={faq.question} className="border-b last:border-b-0 border-gray-200">
+                <button
+                  className="w-full flex justify-between items-center py-3 sm:py-4 lg:py-5 text-left focus:outline-none"
+                  onClick={() => handleAccordionClick(idx)}
+                >
+                  <span className="font-bold text-[17px] md:text-base text-gray-900 pr-2 sm:pr-4 font-sans">
+                    {faq.question}
+                  </span>
+                  <span className="text-xl sm:text-2xl text-blue-700 flex-shrink-0">
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </button>
+
+                <div
+  ref={(el) => { answerRefs.current[idx] = el }} // remove the implicit return
+  className={`overflow-hidden transition-all duration-500 ease-in-out`}
+  style={{ maxHeight: isOpen && answerRefs.current[idx] ? answerRefs.current[idx].scrollHeight + 20 : 0 }}
+>
+                  <p className="pb-3 sm:pb-4 lg:pb-5 text-gray-700 text-[15px] sm:text-base whitespace-pre-line" style={{ fontFamily: '"Mulish", sans-serif' }}>
+                    {faq.answer}
+                  </p>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -27,13 +27,14 @@ const ContactSection = ({
           <p className="text-xl md:text-2xl">{subtitle}</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 xs:gap-6 mt-6 xs:mt-8">
             <Link 
-              href="https://wa.me/8801325875955"
+              href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
               className="bg-[#0066FF] text-white px-6  py-2 md:px-8 md:py-4 rounded-lg hover:bg-blue-600 transition-colors text-sm md:text-base hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25  duration-300"
             >
               Live Chat With Sales
             </Link>
             <Link 
-              href="tel:01325875955"
+            href="https://wa.me/8801325875955"
+             
               className="flex items-center gap-3 text-white hover:text-blue-300 hover:scale-105 transition-all duration-300 text-sm md:text-base"
             >
               <div className="bg-white rounded-full p-2">

@@ -44,11 +44,11 @@ const features = [
 const PlanIncludesSection = () => {
   return (
     <section className="w-full bg-[#fafbfc] md:py-16 py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#03206B] mb-14 tracking-tight">
+      <div className="max-w-7xl mx-auto md:px-4">
+        <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#03206B] md:mb-14 mb-7 tracking-tight">
           All WordPress Hosting Plans Include
         </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ga">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-8 gap-4">
           {features.map((feature, idx) => (
             <div
               key={idx}
