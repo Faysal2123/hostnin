@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
@@ -22,7 +23,7 @@ const HeroSection = () => {
                 <br />
                 <span className="relative">
                   Company in Bangladesh
-                  <div className="absolute bottom-0 left-0 w-16 sm:w-20 lg:w-24 h-1 bg-yellow-400"></div>
+                  <div className="absolute bottom-0 left-0 w-16 sm:w-20 lg:w-24 h-1 bg-white"></div>
                 </span>
               </h1>
             </div>
@@ -38,23 +39,33 @@ const HeroSection = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-              <button onClick={() => {
-                const pricingSection =
-                  document.getElementById("pricing-section");
-                if (pricingSection) {
-                  pricingSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }
-              }} className="w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center text-sm sm:text-base lg:text-[17px]">
-                Start My Hosting Now
-                <FiArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-              </button>
-
+               <button
+      onClick={() => {
+        const pricingSection = document.getElementById("pricing-section");
+        if (pricingSection) {
+          pricingSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }}
+      className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 
+                 rounded-full border border-gray-300 hover:bg-gray-100 
+                 transition-transform duration-300 ease-in-out 
+                 flex items-center justify-center text-sm sm:text-base lg:text-[17px] 
+                 hover:scale-105"
+    >
+      Start My Hosting Now
+      <span
+        className="ml-2 opacity-0 transform translate-x-2 transition-all duration-300 
+                   group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-110"
+      >
+        <FaArrowRightLong className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+      </span>
+    </button>
               <a
                 href="#"
-                className="text-white hover:text-yellow-300 transition-colors duration-300 flex items-center group font-bold text-base sm:text-lg"
+                className="text-white hover:text-blue-300 transition-colors duration-300 flex items-center group font-bold text-base sm:text-lg"
               >
                 Trusted By Agencies & Startups
                 <FiArrowRight className=" w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -63,7 +74,7 @@ const HeroSection = () => {
 
             {/* Guarantee Text */}
             <div className="flex items-center justify-center lg:justify-start text-white/80 text-sm sm:text-base lg:text-lg font-semibold">
-              <FiCheckCircle className="hidden lg:inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-green-400 flex-shrink-0" />
+              <FiCheckCircle className="hidden lg:inline-block w-4 h-4 sm:w-5 sm:h-5 mr-2 text-white flex-shrink-0" />
               <span>30-Day Money-Back Guarantee. Cancel Anytime.</span>
             </div>
           </div>

@@ -7,14 +7,10 @@ const VpsFeaturesSection: React.FC = () => {
   return (
     <section className="w-full bg-[#f7f8fa] py-5 sm:py-5 pb-8 sm:pb-10 flex flex-col items-center relative overflow-x-hidden">
       <div className="max-w-7xl w-full mx-auto px-4">
-        <h2 className="text-[30px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-3 sm:mb-4 text-center font-['Urbanist',sans-serif]">
+        <h2 className="text-[30px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-3  sm:mb-8 text-center font-['Urbanist',sans-serif]">
           Hostnin Virtual Private Servers Include
         </h2>
-        <div className="flex justify-center mb-8 sm:mb-10">
-          <button className="bg-[#2563eb] text-white px-5 md:px-6 lg:px-8 py-3 md:py-2 lg:py-4 rounded-full font-semibold text-[15px] sm:text-sm shadow-md font-['Urbanist',sans-serif]">
-            VPS Feature
-          </button>
-        </div>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-8">
           {vpsFeaturesData.map((feature, idx) => (
             <div

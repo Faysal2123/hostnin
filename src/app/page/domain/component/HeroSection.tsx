@@ -7,6 +7,13 @@ import Image from "next/image";
 const HeroSection = () => {
   const [domainName, setDomainName] = useState("");
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    if (domainName.trim() === "") {
+      e.preventDefault();
+      alert("Please enter a domain name");
+    }
+  };
+
   return (
     <section
       className="pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
@@ -41,19 +48,14 @@ const HeroSection = () => {
             action="https://my.hostnin.com/cart.php?a=add&domain=register"
             method="post"
             target="_blank"
-            onSubmit={(e) => {
-              if (domainName.trim() === "") {
-                e.preventDefault();
-                alert("Please enter a domain name");
-              }
-            }}
+            onSubmit={handleSubmit}
           >
             <input
               type="text"
-              name="domain"
+              name="query"
+              placeholder="ilovehostnin.com"
               value={domainName}
               onChange={(e) => setDomainName(e.target.value)}
-              placeholder="ilovehostnin.com"
               className="w-full px-6 py-4 text-lg bg-gray-200 text-gray-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-400 border-r-0"
             />
             <button
@@ -67,38 +69,24 @@ const HeroSection = () => {
 
           {/* Domain Pricing */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <div className="md:text-left text-center">
-              <div className="text-white text-lg sm:text-xl font-bold mb-1">
-                .COM
+            {[
+              { ext: ".COM", price: "৳1650/Year" },
+              { ext: ".ORG", price: "৳1650/Year" },
+              { ext: ".NET", price: "৳1650/Year" },
+              { ext: ".XYZ", price: "৳599/Year" },
+            ].map((item) => (
+              <div
+                key={item.ext}
+                className="md:text-left text-center"
+              >
+                <div className="text-white text-lg sm:text-xl font-bold mb-1">
+                  {item.ext}
+                </div>
+                <div className="text-slate-300 text-sm sm:text-sm opacity-90">
+                  {item.price}
+                </div>
               </div>
-              <div className="text-slate-300 text-sm sm:text-sm opacity-90">
-                ৳1650/Year
-              </div>
-            </div>
-            <div className="md:text-left text-center">
-              <div className="text-white text-lg sm:text-xl font-bold mb-1">
-                .ORG
-              </div>
-              <div className="text-slate-300 text-sm sm:text-sm opacity-90">
-                ৳1650/Year
-              </div>
-            </div>
-            <div className="md:text-left text-center">
-              <div className="text-white text-lg sm:text-xl font-bold mb-1">
-                .NET
-              </div>
-              <div className="text-slate-300 text-sm sm:text-sm opacity-90">
-                ৳1650/Year
-              </div>
-            </div>
-            <div className="md:text-left text-center">
-              <div className="text-white text-lg sm:text-xl font-bold mb-1">
-                .XYZ
-              </div>
-              <div className="text-slate-300 text-sm sm:text-sm opacity-90">
-                ৳599/Year
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

@@ -33,6 +33,7 @@ const SupportTeamSection = () => {
               {/* Phone Button */}
               <a 
                 href="https://wa.me/8801325875955"
+                target='_blank'
                 className="inline-flex items-center font-bold gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg  hover:bg-gray-100 transition-colors duration-200 font-['Urbanist',sans-serif]"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
@@ -46,6 +47,7 @@ const SupportTeamSection = () => {
               {/* Chat Button */}
               <a 
                 href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
+                target='_blank'
                 className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-200 font-['Urbanist',sans-serif]"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
@@ -53,7 +55,7 @@ const SupportTeamSection = () => {
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                 </div>
-                Chat Now
+                WhatsApp Now
               </a>
             </div>
           </div>

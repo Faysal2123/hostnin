@@ -34,11 +34,13 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
   }, []);
 
   return (
-    <div 
-       className="bg-[#f8f8f8] py-8 lg:pt-[430px] pt-[650px] sm:pt-[600px]">
+    <div className="bg-[#f8f8f8] py-8 lg:pt-[430px] pt-[650px] sm:pt-[600px]">
       <div className="max-w-7xl mx-auto overflow-x-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-blue-50">
         <div className="mb-6 sm:mb-8 px-3 sm:px-0 text-center">
-          <h1 id="pricing-section" className="text-xl sm:text-2xl md:text-4xl lg:text-[40px] font-bold text-[#06125a] font-['Urbanist',sans-serif]">
+          <h1
+            id="pricing-section"
+            className="text-xl sm:text-2xl md:text-4xl lg:text-[40px] font-bold text-[#06125a] font-['Urbanist',sans-serif]"
+          >
             We Have the Perfect VPS Package
           </h1>
           <p className="text-slate-800 w-full sm:w-6/12 mx-auto pt-2 sm:pt-4 text-xs sm:text-sm md:text-base font-['Mulish',sans-serif]">
@@ -86,7 +88,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                           </div>
                           <div className="text-xs lg:text-sm text-blue-200">{plan.priceUnit}</div>
                         </div>
-                        <button className="w-full bg-white transition-all duration-300 text-black font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm lg:text-base cursor-pointer">
+                        <button className="w-full bg-white transition-all duration-300 text-black font-semibold py-2 lg:py-3 px-4 lg:px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:text-blue-600 text-sm lg:text-base cursor-pointer">
                           Order Now
                         </button>
                       </div>
@@ -112,7 +114,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                       <div className="text-3xl font-bold text-white">৳{plan.price}</div>
                       <div className="text-sm text-blue-200">{plan.priceUnit}</div>
                     </div>
-                    <button className="cursor-pointer w-full bg-white transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <button className="cursor-pointer w-full bg-white transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:text-blue-600">
                       Order Now
                     </button>
                   </div>
@@ -121,7 +123,6 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                 <div className="p-4">
                   {data.sections.map((section, sectionIdx) => (
                     <div key={sectionIdx} className="mb-6 last:mb-0">
-                     
                       <div className="space-y-3">
                         {section.features.map((feature, featureIdx) => (
                           <div key={featureIdx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -167,7 +168,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
                           <div className="text-3xl font-bold text-white">৳{plan.price}</div>
                           <div className="text-sm text-blue-200">{plan.priceUnit}</div>
                         </div>
-                        <button className="w-full bg-white/95 transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+                        <button className="w-full bg-white/95 transition-all duration-300 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:text-blue-600 cursor-pointer">
                           Order Now
                         </button>
                       </div>
@@ -178,7 +179,6 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
               <tbody>
                 {data.sections.map((section, sectionIdx) => (
                   <React.Fragment key={sectionIdx}>
-                   
                     {section.features.map((feature, featureIdx) => (
                       <tr key={featureIdx} className={`hover:bg-blue-50/50 transition-colors duration-200 ${featureIdx % 2 === 0 ? "bg-gray-50/50" : "bg-white"}`}>
                         <td className="p-6 font-semibold text-gray-700 border-r border-gray-200">{feature.label}</td>

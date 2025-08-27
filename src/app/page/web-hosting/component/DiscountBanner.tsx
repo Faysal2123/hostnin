@@ -60,7 +60,7 @@ const DiscountBanner: React.FC = () => {
               return (
                 <div
                   key={label}
-                  className="bg-white text-[#1a2340] rounded-md px-1 md:px-2 py-1 flex flex-col items-center min-w-[28px] sm:min-w-[36px]"
+                  className="bg-white text-[#1a2340] rounded-md px-1 md:px-4 py-1 flex flex-col items-center min-w-[28px] sm:min-w-[36px]"
                 >
                   <span className="font-bold text-xs sm:text-sm md:text-lg">
                     {String(value).padStart(2, "0")}
@@ -85,7 +85,7 @@ const DiscountBanner: React.FC = () => {
                 });
               }
             }}
-            className="flex items-center text-xs sm:text-sm font-semibold whitespace-nowrap"
+            className="flex items-center text-xs sm:text-sm font-semibold whitespace-nowrap cursor-pointer"
           >
             View Details
             <svg
@@ -106,7 +106,7 @@ const DiscountBanner: React.FC = () => {
           <button
             onClick={() => setShow(false)}
             aria-label="Close banner"
-            className="text-white text-lg"
+            className="text-white text-lg cursor-pointer"
           >
             <AiOutlineClose size={16} />
           </button>

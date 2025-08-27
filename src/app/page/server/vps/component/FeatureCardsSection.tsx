@@ -276,12 +276,15 @@ const FeatureCardsSection = () => {
             /mo
           </span>
         </span>
-        <Link href="https://my.hostnin.com/cart.php?a=confproduct&i=0"
-          className="bg-gradient-to-r from-[#158aff] to-[#005bea] hover:from-[#005bea] hover:to-[#158aff] text-white font-semibold px-6 sm:px-10 py-2.5 sm:py-4 rounded-full transition-all duration-300 text-[15px] sm:text-[17px] shadow hover:shadow-lg hover:scale-105 transform w-full sm:w-auto"
-          style={{ fontFamily: '"Mulish", sans-serif' }}
-        >
-          Purchase Plan
-        </Link>
+        <Link
+  target="_blank"
+  href={plan.link}
+  className="bg-gradient-to-r from-[#158aff] to-[#005bea] hover:from-[#005bea] hover:to-[#158aff] text-white font-semibold px-6 sm:px-10 py-2.5 sm:py-4 rounded-full transition-all duration-300 text-[15px] sm:text-[17px] shadow hover:shadow-lg hover:scale-105 transform w-full sm:w-auto"
+  style={{ fontFamily: '"Mulish", sans-serif' }}
+>
+  Purchase Plan
+</Link>
+
       </div>
 
       <style jsx>{`

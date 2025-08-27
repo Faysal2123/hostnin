@@ -13,7 +13,7 @@ const NvmeVsSsdSection = () => {
           <p className="text-lg text-gray-600 mb-9 max-w-xl font-['Mulish',sans-serif]">
             Choose an NVMe-based dedicated server and eradicate IO bottlenecks. Your website will load faster, backups will be performed quicker and your server will respond more rapidly. With no moving parts, NVMe is also more reliable, meaning you are far less likely to suffer downtime due to drive failure.
           </p>
-          <Link href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" className="contact-sales-btn min-w-[160px] font-['Urbanist',sans-serif]">Get In Touch</Link>
+          <Link target="_blank" href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" className="contact-sales-btn min-w-[160px] font-['Urbanist',sans-serif]">Get In Touch</Link>
         </div>
         {/* Right Illustration - Image only */}
         <div className="flex-1 min-w-[320px] flex justify-center">

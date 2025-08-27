@@ -55,7 +55,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Ideal for Entry Level Website",
     buttonText: "Add to Cart",
     infoText: "৳2150/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
   {
     title: "Starter",
@@ -110,7 +110,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Ideal for Mid-level Websites",
     buttonText: "Add to Cart",
     infoText: "৳3999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
   {
     title: "Pro",
@@ -165,7 +165,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Perfect for Professional Websites",
     buttonText: "Add to Cart",
     infoText: "৳4999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
     highlight: true,
     badge: "Most Popular",
   },
@@ -222,7 +222,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Best for Huge Resources",
     buttonText: "Add to Cart",
     infoText: "৳9999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
 
   // Yearly Plans
@@ -279,7 +279,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Ideal for Entry Level Website",
     buttonText: "Add to Cart",
     infoText: "৳2150/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
   {
     title: "Starter",
@@ -334,7 +334,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Ideal for Mid-level Websites",
     buttonText: "Add to Cart",
     infoText: "৳3999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
   {
     title: "Pro",
@@ -389,7 +389,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Perfect for Professional Websites",
     buttonText: "Add to Cart",
     infoText: "৳4999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
     highlight: true,
     badge: "Most Popular",
   },
@@ -446,7 +446,7 @@ const pricingPlans: PricingPlan[] = [
     description: "Best for Huge Resources",
     buttonText: "Add to Cart",
     infoText: "৳9999/year when you renew",
-    savingsText: "Save 90% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
   },
 ];
 

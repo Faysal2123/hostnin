@@ -38,12 +38,16 @@ export default function MigrationPromoSection({ onViewPricingClick }: MigrationP
           <p className="text-gray-600 mb-6">
             Migrating one hosting to another is daunting this is why we have dedicated team for migration of your website. Let&apos;s sit relax and look how your website migrate in a moment. We process this migration in 3 steps: Backup, transfer and restore.
           </p>
-          <button
-            onClick={onViewPricingClick}
-            className="px-6 py-3 cursor-pointer bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-700 hover:text-white transition"
-          >
-            View Pricing Plan
-          </button>
+        <button
+  onClick={onViewPricingClick}
+  className="px-6 py-3 cursor-pointer bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg shadow 
+             hover:bg-blue-700 hover:text-white transform hover:scale-105 
+             transition-all duration-300 ease-in-out"
+>
+  View Pricing Plan
+</button>
+
+
         </div>
       </div>
     </section>

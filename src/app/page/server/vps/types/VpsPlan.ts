@@ -8,4 +8,5 @@ export interface VpsPlan {
   name: string;
   price: number;
   features: VpsFeature[];
-} 
+  link: string; 
+}

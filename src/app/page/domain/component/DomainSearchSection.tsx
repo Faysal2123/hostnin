@@ -90,13 +90,14 @@ const DomainSearchSection: React.FC = () => {
           {domainData.map((domain, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:scale-105 transition-all duration-500 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
 
-              <div className="absolute -right-5 top-4 bg-gradient-to-b from-red-500 to-pink-400 text-white text-xs font-bold px-2 py-1 rounded transform rotate-90 origin-left z-10 shadow-lg">
-                {domain.discount} off
-              </div>
+              <div className="absolute top-9 right-4 bg-gradient-to-b from-red-500 to-pink-400 text-white text-xs font-bold px-2 py-1 rounded z-10 shadow-lg">
+  {domain.discount} off
+</div>
+
 
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex items-center mb-4">
@@ -110,24 +111,18 @@ const DomainSearchSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div
-                  className="text-2xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300 mb-2"
-                  style={{ fontFamily: '"Urbanist", sans-serif' }}
-                >
+                <div className="text-2xl font-bold text-gray-900 group-hover:text-white transition-colors duration-500 mb-2" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                   {domain.currentPrice}/yr
                 </div>
 
-                <div
-                  className="text-base text-gray-500 group-hover:text-white group-hover:opacity-80 transition-all duration-300 mb-4"
-                  style={{ fontFamily: '"Mulish", sans-serif' }}
-                >
+                <div className="text-base text-gray-500 group-hover:text-white group-hover:opacity-80 transition-colors duration-500 mb-4" style={{ fontFamily: '"Mulish", sans-serif' }}>
                   Instead of {domain.originalPrice}/yr
                 </div>
 
                 <div className="mt-auto">
                   <a
                     href="https://my.hostnin.com/cart.php?a=add&domain=register&currency=1"
-                    className="inline-flex items-center text-blue-600 group-hover:text-white font-bold transition-colors duration-300"
+                    className="inline-flex items-center text-blue-600 group-hover:text-white font-bold transition-colors duration-500"
                     style={{ fontFamily: '"Urbanist", sans-serif' }}
                   >
                     Register Now{" "}

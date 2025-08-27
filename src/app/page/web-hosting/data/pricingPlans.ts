@@ -44,7 +44,7 @@ const pricingPlans: PricingPlan[] = [
     currency: "৳",
     billingPeriod: "monthly",
     features: createFeatures("5 GB", "Standard Website Speed", "2"),
-    savingsText: "Save ৳6,393 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "basic",
@@ -85,7 +85,8 @@ const pricingPlans: PricingPlan[] = [
         { text: "Multiple Hosting Locations", included: true, tooltip: "Choice of multiple server locations worldwide" },
         { text: "Host PHP & Laravel Script", included: true, tooltip: "Support for PHP and Laravel framework applications" },
         { text: "E-Commerce Optimised Server", included: false, tooltip: "Server optimized specifically for e-commerce applications" },
-        { text: "SSH/Terminal Access", included: false, tooltip: "Secure Shell access for command-line operations" }
+        { text: "SSH/Terminal Access", included: false, tooltip: "Secure Shell access for command-line operations" },
+        { text: "Shell Access (Jailed)", included: false, tooltip: "Restricted shell access for security" }
       ],
       security: [
         { text: "24/7 Monitoring By Experts", included: true, tooltip: "Round-the-clock monitoring by security experts" },
@@ -104,7 +105,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: false, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳9,515 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "starter",
@@ -166,7 +167,7 @@ const pricingPlans: PricingPlan[] = [
       ]
     },
     badge: "Most Popular",
-    savingsText: "Save ৳11,493 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     highlight: true,
@@ -228,7 +229,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: true, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳19,993 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "ultimate",
@@ -241,7 +242,7 @@ const pricingPlans: PricingPlan[] = [
     currency: "৳",
     billingPeriod: "yearly",
     features: createFeatures("5 GB", "Standard Website Speed", "2"),
-    savingsText: "Save ৳6,393 with Free Domain",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Renew at Same Price, Every year.",
     icon: "basic",
@@ -282,7 +283,8 @@ const pricingPlans: PricingPlan[] = [
         { text: "Multiple Hosting Locations", included: true, tooltip: "Choice of multiple server locations worldwide" },
         { text: "Host PHP & Laravel Script", included: true, tooltip: "Support for PHP and Laravel framework applications" },
         { text: "E-Commerce Optimised Server", included: false, tooltip: "Server optimized specifically for e-commerce applications" },
-        { text: "SSH/Terminal Access", included: false, tooltip: "Secure Shell access for command-line operations" }
+        { text: "SSH/Terminal Access", included: false, tooltip: "Secure Shell access for command-line operations" },
+         { text: "Shell Access (Jailed)", included: false, tooltip: "Restricted shell access for security" }
       ],
       security: [
         { text: "24/7 Monitoring By Experts", included: true, tooltip: "Round-the-clock monitoring by security experts" },
@@ -301,7 +303,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: false, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳9,515 with Free Domain",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Renew at Same Price, Every year.",
     icon: "starter",
@@ -363,7 +365,7 @@ const pricingPlans: PricingPlan[] = [
       ]
     },
     badge: "Most Popular",
-    savingsText: "Save ৳11,493 with Free Domain",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Renew at Same Price, Every year.",
     highlight: true,
@@ -425,7 +427,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: true, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳19,993 with Free Domain",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Renew at Same Price, Every year.",
     icon: "ultimate",

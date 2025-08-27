@@ -36,7 +36,7 @@ const pricingPlans: PricingPlan[] = [
     currency: "৳",
     billingPeriod: "monthly",
     features: createFeatures("5 GB", "2", "2", "2", "15", "20"),
-    savingsText: "Save ৳6,393 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "basic",
@@ -82,7 +82,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: false, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳9,515 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "starter",
@@ -129,7 +129,7 @@ const pricingPlans: PricingPlan[] = [
       ]
     },
     badge: "Most Popular",
-    savingsText: "Save ৳11,493 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     highlight: true,
@@ -176,7 +176,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: true, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save ৳19,993 on Yearly Plan",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Save Upto 76% on Yearly Plan",
     icon: "ultimate",
@@ -189,7 +189,7 @@ const pricingPlans: PricingPlan[] = [
     currency: "৳",
     billingPeriod: "yearly",
     features: createFeatures("5 GB", "2", "2", "2", "15", "20"),
-    savingsText: "Save ৳6,393 with Free Domain",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "Renew at Same Price, Every year.",
     icon: "basic",
@@ -235,7 +235,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: false, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save 50% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "৳12999/year when you renew",
     icon: "starter",
@@ -282,7 +282,7 @@ const pricingPlans: PricingPlan[] = [
       ]
     },
     badge: "Most Popular",
-    savingsText: "Save 50% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "৳21999/year when you renew",
     highlight: true,
@@ -329,7 +329,7 @@ const pricingPlans: PricingPlan[] = [
         { text: "Priority Website Support", included: true, tooltip: "Priority support queue for faster response times" }
       ]
     },
-    savingsText: "Save 50% on Yearly Billing",
+    savingsText: "24/7 WhatsApp & Call Support",
     buttonText: "Add to Cart",
     infoText: "৳35999/year when you renew",
     icon: "ultimate",

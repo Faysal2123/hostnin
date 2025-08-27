@@ -56,7 +56,7 @@ const iconMap: Record<string, React.ReactNode> = {
 const PricingSection = () => {
   const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
   const [showExpandedFeatures, setShowExpandedFeatures] = useState(false);
-   const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+  const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
 
   const handleTooltipClick = (i: number) => {
     setActiveTooltip(i);
@@ -67,15 +67,13 @@ const PricingSection = () => {
 
   return (
     <section
-      
-      
       className="pricing-scroll w-full flex flex-col items-center justify-center py-8 sm:py-10 md:py-14 lg:py-20 bg-[#f8f8f8] pt-8 md:pt-[500px] lg:pt-60 px-4 sm:px-6"
       style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
     >
       <div className="w-full max-w-7xl">
         <h2
-        id="pricing-section"
-        data-section="pricing"
+          id="pricing-section"
+          data-section="pricing"
           className="pb-3 text-[25px] md:text-4xl lg:text-5xl font-bold text-slate-700 mb-2  md:mb-4 text-center "
           style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
         >
@@ -152,10 +150,13 @@ const PricingSection = () => {
                   : plan.title === "Basic" || plan.title === "Starter"
                   ? "translate-y-14 border-transparent hover:border-blue-200"
                   : plan.title === "Ultimate"
-                  ? "translate-y-12 border-transparent hover:border-blue-200"
+                  ? "translate-y-[62px] border-transparent hover:border-blue-200"
                   : "translate-y-20 border-transparent hover:border-blue-200"
               } ${plan.title === "Pro" ? "mt-6 sm:mt-0" : ""}`}
-              style={{ minHeight: "820px", fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+              style={{
+                minHeight: "820px",
+                fontFamily: '"Plus Jakarta Sans", sans-serif',
+              }}
             >
               {plan.highlight && (
                 <div
@@ -163,17 +164,8 @@ const PricingSection = () => {
                   style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
                 >
                   <div className="text-xs md:text-lg font-semibold">
-                    Best deal - Limited time only
+                    Most Popular
                   </div>
-                </div>
-              )}
-
-              {plan.badge && (
-                <div
-                  className="absolute -top-5 sm:-top-6 md:right-12 right-20 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold md:px-10 px-7 py-1.5 rounded-full shadow md:text-base"
-                  style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
-                >
-                  {plan.badge}
                 </div>
               )}
 
@@ -230,7 +222,7 @@ const PricingSection = () => {
                   <button
                     className={`w-full py-4 px-6 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer transform hover:scale-105 ${
                       plan.highlight
-                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl"
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 shadow-lg hover:shadow-xl"
                         : "bg-white text-blue-600 border-2 border-blue-600 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 hover:text-white hover:border-transparent shadow-md hover:shadow-lg"
                     }`}
                     style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
@@ -248,33 +240,63 @@ const PricingSection = () => {
 
                 <div className="w-full mb-8">
                   <div className="mb-6">
-                    {(plan.title === "Basic" ) && (
+                    {plan.title === "Basic" && (
                       <div
-                        className="bg-gray-100 rounded-lg p-3"
-                        style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                        className="bg-gray-100 rounded-lg p-3 relative"
+                        style={{
+                          fontFamily: '"Plus Jakarta Sans", sans-serif',
+                        }}
                       >
                         <div className="bg-gray-300 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
                           Special Gift
                         </div>
-                        <p className="text-gray-500 text-xs">
-                          Landing page design and Facebook mastery course
-                        </p>
+
+                        {/* Text with tooltip */}
+                        <div className="relative group cursor-pointer">
+                          <p className="text-gray-500 text-xs md:text-base">
+                            Landing page design and Facebook mastery course
+                          </p>
+
+                          {/* Tooltip */}
+                          <div className="absolute left-0 top-full mt-2 w-50 md:w-56 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-auto z-50">
+                            Claim your complimentary Landing Page & Ads
+                            Masterclass — designed to help you succeed online.
+                            (৳6000 Value)
+                            <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
+                          </div>
+                        </div>
                       </div>
                     )}
 
-                    {(plan.title === "Pro" || plan.title === "Ultimate"|| plan.title === "Starter") && (
+                    {(plan.title === "Pro" ||
+                      plan.title === "Ultimate" ||
+                      plan.title === "Starter") && (
                       <div
-                        className="bg-green-50 rounded-lg p-3"
-                        style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                        className="bg-green-50 rounded-lg p-3 relative"
+                        style={{
+                          fontFamily: '"Plus Jakarta Sans", sans-serif',
+                        }}
                       >
-                        <div className="bg-teal-500 text-white text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
+                        <div className="bg-teal-500 text-white text-xs md:text-sm font-semibold px-2 py-1 rounded-full inline-block mb-2">
                           Special Gift
                         </div>
-                        <div className="flex items-center gap-1">
-                          <span className="text-teal-500 text-sm">🎁</span>
-                          <p className="text-gray-700 text-xs underline decoration-dotted md:text-xs">
+                        <div
+                          className="flex items-center gap-1 cursor-pointer group"
+                          title="Claim your complimentary Landing Page & Ads Masterclass — designed to help you succeed online. (৳6000 Value)"
+                        >
+                          <span className="text-teal-500 text-base">
+                            🎁
+                          </span>
+                          <p className="text-gray-700 text-sm  md:text-base group-hover:text-teal-600">
                             Landing page design and Facebook mastery course
                           </p>
+                          {/* Optional custom tooltip on hover */}
+                          <div className="absolute left-0 top-full mt-2 w-50 md:w-56 bg-blue-600 text-white text-sm md:text-base rounded-lg p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto z-50">
+                            Claim your complimentary Landing Page & Ads
+                            Masterclass — designed to help you succeed online.
+                            (৳6000 Value)
+                            <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -287,32 +309,36 @@ const PricingSection = () => {
                     Features
                   </h4>
                   <div className="space-y-3">
-                     {plan.features.map((feature: any, i: number) => (
-        <div
-          key={i}
-          className="flex items-center gap-3 group relative"
-          onClick={() => handleTooltipClick(i)} // Click for small devices
-        >
-          <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
-            <FaCheck className="text-xs text-blue-600 font-bold" />
-          </div>
-          <span className="text-[15px] md:text-base text-gray-700 cursor-help font-medium">
-            {feature.text}
-          </span>
+                    {plan.features.map((feature: any, i: number) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 group relative"
+                        onClick={() => handleTooltipClick(i)} // Click for small devices
+                      >
+                        <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
+                          <FaCheck className="text-xs text-blue-600 font-bold" />
+                        </div>
+                        <span className="text-[15px] md:text-base text-gray-700 cursor-help font-medium">
+                          {feature.text}
+                        </span>
 
-          {feature.tooltip && (
-            <div
-              className={`absolute left-0 top-full mt-2 z-50 w-60 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg
-                ${activeTooltip === i ? "opacity-100 visible" : "opacity-0 invisible"}
+                        {feature.tooltip && (
+                          <div
+                            className={`absolute left-0 top-full mt-2 z-50 w-60 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg
+                ${
+                  activeTooltip === i
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible"
+                }
                 md:group-hover:opacity-100 md:group-hover:visible
                 transition-opacity duration-300 pointer-events-auto`}
-            >
-              {feature.tooltip}
-              <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
-            </div>
-          )}
-        </div>
-      ))}
+                          >
+                            {feature.tooltip}
+                            <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
+                          </div>
+                        )}
+                      </div>
+                    ))}
 
                     {/* Show More */}
                     {showExpandedFeatures && plan.expandedFeatures && (
@@ -322,7 +348,9 @@ const PricingSection = () => {
                             <div key={category} className="mt-6">
                               <h5
                                 className="font-bold text-gray-800 mb-3 text-xl capitalize bg-gray-50 px-3 py-2 rounded-lg"
-                                style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                                style={{
+                                  fontFamily: '"Plus Jakarta Sans", sans-serif',
+                                }}
                               >
                                 {category}
                               </h5>
@@ -345,14 +373,20 @@ const PricingSection = () => {
                                       )}
                                       <span
                                         className="text-[15px] lg:text-base text-gray-700 cursor-help font-medium"
-                                        style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                                        style={{
+                                          fontFamily:
+                                            '"Plus Jakarta Sans", sans-serif',
+                                        }}
                                       >
                                         {feature.text}
                                       </span>
                                       {feature.tooltip && (
                                         <div
                                           className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-3 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 pointer-events-auto"
-                                          style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+                                          style={{
+                                            fontFamily:
+                                              '"Plus Jakarta Sans", sans-serif',
+                                          }}
                                         >
                                           {feature.tooltip}
                                           <div className="absolute -top-2 left-4 w-3 h-3 bg-blue-600 transform rotate-45"></div>
@@ -394,11 +428,14 @@ const PricingSection = () => {
                     }`}
                     onClick={() => {
                       setShowExpandedFeatures(false);
-                      const section = document.getElementById("pricing-section");
+                      const section =
+                        document.getElementById("pricing-section");
                       if (section) {
                         const yOffset = -80;
                         const y =
-                          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                          section.getBoundingClientRect().top +
+                          window.pageYOffset +
+                          yOffset;
                         window.scrollTo({ top: y, behavior: "smooth" });
                       }
                     }}
