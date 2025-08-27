@@ -22,11 +22,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/web-hosting',
-        destination: '/page/web-hosting', 
+        destination: '/web-hosting', 
       },
       {
         source: '/contact',
-        destination: '/page/about/contact', 
+        destination: '/about/contact', 
       },
     ];
   },

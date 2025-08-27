@@ -1,15 +1,15 @@
 "use client"
+import ControlPanelSection from "./home/ControlPanelSection";
+import DomainSearchSection from "./home/DomainSearchSection";
+import FeatureShowcaseSection from "./home/FeatureShowcaseSection";
+import HeroSection from "./home/HeroSection";
+import HostingPlansSection from "./home/HostingPlansSection";
+import MigrationPromoSection from "./home/MigrationPromoSection";
+import NewsletterSection from "./home/NewsletterSection";
+import ReviewSection from "./home/ReviewSection";
 import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
-import ControlPanelSection from "./page/home/ControlPanelSection";
-import DomainSearchSection from "./page/home/DomainSearchSection";
 
-import FeatureShowcaseSection from "./page/home/FeatureShowcaseSection";
-import HeroSection from "./page/home/HeroSection";
-import HostingPlansSection from "./page/home/HostingPlansSection";
-import MigrationPromoSection from "./page/home/MigrationPromoSection";
-import NewsletterSection from "./page/home/NewsletterSection";
-import ReviewSection from "./page/home/ReviewSection";
 import { useRef } from "react";
 
 export default function Home() {
