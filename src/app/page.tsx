@@ -1,4 +1,5 @@
 "use client"
+
 import ControlPanelSection from "./home/ControlPanelSection";
 import DomainSearchSection from "./home/DomainSearchSection";
 import FeatureShowcaseSection from "./home/FeatureShowcaseSection";
@@ -7,7 +8,8 @@ import HostingPlansSection from "./home/HostingPlansSection";
 import MigrationPromoSection from "./home/MigrationPromoSection";
 import NewsletterSection from "./home/NewsletterSection";
 import ReviewSection from "./home/ReviewSection";
-import Footer from "./layout/Footer";
+import TeamSupportSection from "./home/TeamSupportSection";
+
 import Navbar from "./layout/Navbar";
 
 import { useRef } from "react";
@@ -23,7 +25,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+   <div>
+     <div className="min-h-screen">
+    
       
       <Navbar />
       <HeroSection></HeroSection>
@@ -36,10 +40,11 @@ export default function Home() {
       <DomainSearchSection></DomainSearchSection>
       <ControlPanelSection></ControlPanelSection>
       <ReviewSection></ReviewSection>
+      <TeamSupportSection></TeamSupportSection>
       
      <NewsletterSection></NewsletterSection>
       
-      <Footer></Footer>
     </div>
+   </div>
   );
 }

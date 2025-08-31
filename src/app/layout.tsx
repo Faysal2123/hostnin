@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Urbanist, Mulish } from "next/font/google";
 import Navbar from './layout/Navbar'
 import "./globals.css";
+import Footer from "./layout/Footer";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -51,8 +52,10 @@ export default function RootLayout({
       <body className={`${geist.className} ${urbanist.variable} ${mulish.variable} antialiased`}>
         <Navbar />
         <main className="pt-20">
+         
           {children}
         </main>
+        <Footer></Footer>
       </body>
     </html>
   );

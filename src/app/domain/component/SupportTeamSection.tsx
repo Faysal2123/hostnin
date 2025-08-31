@@ -46,7 +46,7 @@ const SupportTeamSection = () => {
 
               {/* Chat Button */}
               <a 
-                href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
+                href="https://api.whatsapp.com/send/?phone=8801325875955&text&type=phone_number&app_absent=0"
                 target='_blank'
                 className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-200 font-['Urbanist',sans-serif]"
               >

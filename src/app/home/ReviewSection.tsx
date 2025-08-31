@@ -9,7 +9,7 @@ import googleLogo from "../assets/google.png.webp";
 import arrowDark from "../assets/arrow-dark.webp";
 
 import { IoIosStar } from "react-icons/io";
-import { testimonials } from "../web-hosting/data/testimonialData";
+import { testimonials } from "../hosting/web-hosting/data/testimonialData";
 
 const sliderSettings = {
   dots: false,

@@ -15,6 +15,8 @@ import {
   FaDatabase,
   FaPhone,
   FaHdd,
+  FaFileAlt,
+  
 } from "react-icons/fa";
 
 type DropdownItem = {
@@ -40,6 +42,11 @@ const Navbar = () => {
 
   const menuItems: MenuItem[] = [
     {
+      title: "Pricing",
+      hasDropdown: false,
+      link: "/pricing",
+    },
+    {
       title: "Hosting",
       hasDropdown: true,
       megaMenu: true,
@@ -48,37 +55,37 @@ const Navbar = () => {
           title: "Web Hosting",
           description: "NVMe SSD server",
           icon: <FaServer />,
-          link: "/web-hosting",
+          link: "/hosting/web-hosting",
         },
         {
           title: "Cloud Hosting",
           description: "Fast autoscaling server",
           icon: <FaCloud />,
-          link: "/cloud-hosting",
+          link: "/hosting/cloud-hosting",
         },
         {
           title: "WordPress Hosting",
           description: "Fully Managed WordPress",
           icon: <FaWordpress />,
-          link: "/wordpress-hosting",
+          link: "/hosting/wordpress-hosting",
         },
         {
           title: "Reseller Hosting",
           description: "Start your Business",
           icon: <FaBriefcase />,
-          link: "/reseller-hosting",
+          link: "/hosting/reseller-hosting",
         },
         {
           title: "BDIX Hosting",
           description: "Lowest Network Latency",
           icon: <FaNetworkWired />,
-          link: "/bdix-hosting",
+          link: "/hosting/bdix-hosting",
         },
         {
           title: "Turbo Hosting",
           description: "Fast Speed Guaranteed",
           icon: <FaBolt />,
-          link: "/turbo-hosting",
+          link: "/hosting/turbo-hosting",
         },
       ],
     },
@@ -90,12 +97,12 @@ const Navbar = () => {
         {
           title: "VPS",
           icon: <FaCloud />,
-          link: "/server/vps",
+          link: "/hosting/vps-hosting",
         },
         {
           title: "Dedicated",
           icon: <FaHdd />,
-          link: "/server/dedicated",
+          link: "/hosting/dedicated-server",
         },
       ],
     },
@@ -106,17 +113,22 @@ const Navbar = () => {
         {
           title: "Privacy Policy",
           icon: <FaBuilding />,
-          link: "/about/privacy",
+          link: "/privacy-policy",
         },
         {
           title: "Terms & Condition",
-          icon: <FaDatabase />,
-          link: "/about/condition",
+          icon: <FaFileAlt />,
+          link: "/terms-conditions",
+        },
+        {
+          title: "Careers (Hiring)",
+          icon: <FaBriefcase />,
+          link: "/careers",
         },
         {
           title: "Contact",
           icon: <FaPhone />,
-          link: "/about/contact",
+          link: "/contact",
         },
       ],
     },
@@ -188,25 +200,35 @@ const Navbar = () => {
                           className={
                             item.megaMenu
                               ? "grid grid-cols-2 gap-2"
-                              : "flex flex-col gap-2"
+                              : "flex flex-col gap-1" // Changed from gap-2 to gap-1
                           }
                         >
                           {item.dropdownItems?.map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
                               href={subItem.link}
-                              className="group flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                              className={`group flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 transition-colors ${
+                                item.title === "Server" ? "py-1.5" : "" // Reduced padding for Server dropdown items
+                              }`}
                               onMouseEnter={() => handleMouseEnter(item.title)}
                             >
                               <span
-                                className={`flex items-center justify-center w-10 h-10 rounded-lg text-2xl text-black group-hover:text-blue-500 transition-colors`}
+                                className={`flex items-center justify-center w-10 h-10 rounded-lg text-2xl text-black group-hover:text-blue-500 transition-colors ${
+                                  item.title === "Server" ? "w-8 h-8 text-xl" : "" // Smaller icon for Server dropdown
+                                }`}
                               >
                                 {subItem.icon}
                               </span>
 
                               <div className="flex flex-col justify-center">
                                 <p className="font-bold text-gray-800 text-sm leading-tight">
-                                  {subItem.title}
+                                  {subItem.title === "Careers (Hiring)" ? (
+                                    <>
+                                      Careers <span className="text-yellow-500">(Hiring)</span>
+                                    </>
+                                  ) : (
+                                    subItem.title
+                                  )}
                                 </p>
                                 {subItem.description && (
                                   <p className="text-gray-700 text-sm">
@@ -232,8 +254,9 @@ const Navbar = () => {
             </ul>
 
             <Link
+            target="_blank"
               href="https://my.hostnin.com/?_gl=1*..."
-              className="bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-4 rounded-xl font-semibold text-[15px] hover:from-blue-600 hover:to-blue-500 transition cursor-pointer"
+              className="bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-4 rounded-lg font-semibold text-[15px] hover:from-blue-600 hover:to-blue-500 transition cursor-pointer"
             >
               Dashboard
             </Link>
@@ -313,23 +336,33 @@ const Navbar = () => {
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      <div className="pl-4 pb-4 flex flex-col gap-2">
+                      <div className="pl-4 pb-4 flex flex-col gap-1"> {/* Changed from gap-2 to gap-1 */}
                         {item.dropdownItems?.map((subItem, subIndex) => (
                           <Link
                             key={subIndex}
                             href={subItem.link}
-                            className="group flex items-center gap-3 py-2 text-gray-600 hover:text-blue-600 transition-all duration-200 hover:translate-x-1 text-base font-medium"
+                            className={`group flex items-center gap-3 py-2 text-gray-600 hover:text-blue-600 transition-all duration-200 hover:translate-x-1 text-base font-medium ${
+                              item.title === "Server" ? "py-1" : "" // Reduced padding for Server dropdown items
+                            }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             <span
-                              className={`flex items-center justify-center w-10 h-10 rounded-lg text-xl text-black group-hover:text-blue-500 transition-colors`}
+                              className={`flex items-center justify-center w-10 h-10 rounded-lg text-xl text-black group-hover:text-blue-500 transition-colors ${
+                                item.title === "Server" ? "w-8 h-8 text-lg" : "" // Smaller icon for Server dropdown
+                              }`}
                             >
                               {subItem.icon}
                             </span>
 
                             <div className="flex flex-col">
                               <span className="text-sm font-medium">
-                                {subItem.title}
+                                {subItem.title === "Careers (Hiring)" ? (
+                                  <>
+                                    Careers <span className="text-yellow-500">(Hiring)</span>
+                                  </>
+                                ) : (
+                                  subItem.title
+                                )}
                               </span>
                               {subItem.description && (
                                 <span className="text-xs text-gray-500">
@@ -359,6 +392,7 @@ const Navbar = () => {
         {/* Dashboard Button - Full Width on Mobile */}
         <div className="p-4 border-t border-gray-200 w-full">
           <Link
+          target="_blank"
             href="https://my.hostnin.com/?_gl=..."
             className="block w-full bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-4 rounded font-semibold text-[15px] hover:from-blue-600 hover:to-blue-500 transition text-center"
           >

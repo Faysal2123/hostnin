@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const DomainFeaturesSection = () => {
   return (
-    <section className="md:py-16  py-8 bg-[#f8f8f8]">
+    <section className="md:py-16 py-8 bg-[#f8f8f8]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Hero Section - Domain Registration Banner */}
         <div className="text-center mb-20">
-          <h1 className="md:text-4xl text-3xl text-center  font-bold text-black mb-6 font-['Urbanist',sans-serif]">
+          <h1 className="md:text-4xl text-3xl text-center font-bold text-black mb-6 font-['Urbanist',sans-serif]">
             Register Your Domain with Hostnin
           </h1>
           <p className="text-gray-700 md:text-center text-base leading-relaxed max-w-4xl mx-auto text-justify font-['Mulish',sans-serif]">
@@ -19,7 +19,7 @@ const DomainFeaturesSection = () => {
         </div>
 
         {/* First Section - Domain Registration */}
-        <div className="grid lg:grid-cols-2 md:gap-12  items-center  mb-20">
+        <div className="grid lg:grid-cols-2 md:gap-12 items-center mb-20">
           {/* Image */}
           <div className="flex justify-center">
             <Image
@@ -47,14 +47,15 @@ const DomainFeaturesSection = () => {
                 anytime, anywhere.
               </p>
               <p
-                className="text-gray-600 text-base "
+                className="text-gray-600 text-base"
                 style={{ fontFamily: '"Mulish", sans-serif' }}
               >
                 By using the DNS Management option, you can add your domain
                 records, such as A, TXT, and MX records.
                 <br />
-                We simplified everything for you. When you're ready, place your
-                order and we'll get you going!
+                {
+                  "We simplified everything for you. When you're ready, place your order and we'll get you going!"
+                }
               </p>
             </div>
           </div>
@@ -93,7 +94,7 @@ const DomainFeaturesSection = () => {
           </div>
         </div>
 
-        {/* Third Section - DNS Management */}
+        {/* Third Section - Move anytime */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="flex justify-center">
@@ -113,15 +114,14 @@ const DomainFeaturesSection = () => {
             </h2>
             <div className="space-y-4 text-gray-600 text-base leading-relaxed">
               <p className="font-['Mulish',sans-serif]">
-                We safeguard not only your confidentiality but also your right
-                to remain here. With our full domain control panel, you can go
-                anywhere, at any time, with a single click. Being with us is not
-                restricted in any way.
+                {
+                  "We safeguard not only your confidentiality but also your right to remain here. With our full domain control panel, you can go anywhere, at any time, with a single click. Being with us is not restricted in any way."
+                }
               </p>
               <p className="font-['Mulish',sans-serif]">
-                Take complete control of your domains and ensure the security of
-                your website. We have no restrictions on renewing with us, and
-                it will be valid until the last hour of the expiration date.
+                {
+                  "Take complete control of your domains and ensure the security of your website. We have no restrictions on renewing with us, and it will be valid until the last hour of the expiration date."
+                }
               </p>
             </div>
           </div>

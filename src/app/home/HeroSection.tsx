@@ -39,36 +39,34 @@ const HeroSection = () => {
 
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-               <button
-      onClick={() => {
-        const pricingSection = document.getElementById("pricing-section");
-        if (pricingSection) {
-          pricingSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }}
-      className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 
-                 rounded-full border border-gray-300 hover:bg-gray-100 
-                 transition-transform duration-300 ease-in-out 
-                 flex items-center justify-center text-sm sm:text-base lg:text-[17px] 
-                 hover:scale-105"
-    >
-      Start My Hosting Now
-      <span
-        className="ml-2 opacity-0 transform translate-x-2 transition-all duration-300 
-                   group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-110"
-      >
-        <FaArrowRightLong className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-      </span>
-    </button>
+              <button
+  onClick={() => {
+    const pricingSection = document.getElementById("pricing-section");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }}
+  className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 
+    rounded-full border border-gray-300 hover:bg-gray-100 
+    transition-transform duration-300 ease-in-out 
+    flex items-center justify-center text-sm sm:text-base lg:text-[17px] 
+    hover:scale-105"
+>
+  Start My Hosting Now
+  <span
+    className="ml-2 flex items-center "
+  >
+    <FaArrowRightLong className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+  </span>
+</button>
               <a
                 href="#"
-                className="text-white hover:text-blue-300 transition-colors duration-300 flex items-center group font-bold text-base sm:text-lg"
+                className="text-white flex items-center group font-bold text-base sm:text-lg"
               >
-                Trusted By Agencies & Startups
-                <FiArrowRight className=" w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                Trusted By 5000+ Business
               </a>
             </div>
 

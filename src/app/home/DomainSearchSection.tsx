@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { DomainPrice } from "../web-hosting/types/DomainPrice";
-import { domainPrices } from "../web-hosting/data/domainPrices";
+import { DomainPrice } from "../hosting/web-hosting/types/DomainPrice";
+import { domainPrices } from "../hosting/web-hosting/data/domainPrices";
 
 export default function DomainSearchSection() {
   const [domain, setDomain] = useState("");
