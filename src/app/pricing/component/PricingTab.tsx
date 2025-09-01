@@ -9,7 +9,7 @@ const tabs = [
   { id: "Web Hosting", label: "Web Hosting", component: <WebHostingPrice /> },
   { id: "Cloud Hosting", label: "Cloud Hosting", component: <CloudHostingPrice /> },
   { id: "Turbo Hosting", label: "Turbo Hosting", component: <TurboHostingPrice /> },
-  { id: "Bdix Hosting", label: "Bdix Hosting", component: <BdixHostingPrice /> },
+  { id: "Bdix Hosting", label: "BDIX Hosting", component: <BdixHostingPrice /> },
 ];
 
 const PricingTab = () => {
@@ -18,6 +18,7 @@ const PricingTab = () => {
   return (
     <div className="pt-5 bg-[#f8f8f8]">
       {/* Tab Buttons */}
+      <p className="text-[25px] md:text-4xl lg:text-5xl text-center font-bold py-9">Select your Perfect Plan</p>
       <div className="flex justify-center px-3">
         <div
           className="

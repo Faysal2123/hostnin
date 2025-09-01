@@ -12,12 +12,13 @@ import {
   FaNetworkWired,
   FaBolt,
   FaBuilding,
-  FaDatabase,
+  
   FaPhone,
   FaHdd,
   FaFileAlt,
   
 } from "react-icons/fa";
+import Script from "next/script";
 
 type DropdownItem = {
   title: string;
@@ -151,6 +152,16 @@ const Navbar = () => {
 
   return (
     <>
+    <Script id="gtm-script" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-KVN2PWTQ');
+        `}
+      </Script>
+
       <nav className="w-full fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
         <div className="md:max-w-7xl mx-auto flex items-center justify-between py-5 md:py-3.5 px-2 md:px-4">
           {/* Logo */}

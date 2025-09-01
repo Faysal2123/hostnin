@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Image from 'next/image';
+import img from "../../../assets/cloud hosting cPanel.png"
 
 // Custom CSS for smooth animations
 const cardStyles = `
@@ -91,9 +92,9 @@ const ControlPanelSection = () => {
         </div>
 
         {/* Right: Laptop Image */}
-        <div className="flex-1 flex justify-center items-center mt-8 sm:mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md xl:max-w-2xl">
+        <div className="flex-[1.5] flex justify-center items-center mt-8 sm:mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md xl:max-w-7xl">
           <Image
-            src="https://hostnin.com/wp-content/uploads/2022/07/laptop-mockup-of-a-macbook-air-over-transparent-background-e1667973147100-2048x1193.png.webp"
+            src={img}
             alt="Control Panel Laptop"
             width={600}
             height={400}

@@ -3,6 +3,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import pricingPlans from "../data/bdixData";
 import { useState } from "react";
+import Link from "next/link";
 
 const tabClass = (active: boolean) =>
   `px-3 sm:px-4 md:px-7 md:py-1.5 py-1 cursor-pointer font-semibold text-sm sm:text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
@@ -69,7 +70,7 @@ const BdixHostingPrice = () => {
 
   return (
     <section
-      className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8  bg-[#f8f8f8] pt-8  px-3 sm:px-6 md:py-14"
+      className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8  bg-[#f8f8f8] pt-8  px-3 sm:px-6 md:pt-14"
       style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
     >
       <div className="w-full max-w-7xl">
@@ -182,15 +183,15 @@ const BdixHostingPrice = () => {
                   <div className="mb-6">
                     {/* Starter Plan Special Gift */}
                     {plan.title === "Starter" && (
-                      <div className="bg-gray-100 rounded-lg p-3 relative group">
+                      <div  className="bg-gray-100 rounded-lg p-3 relative group">
                         <div className="bg-gray-400 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
                           Special Gift
                         </div>
                       <div className="flex items-center gap-1 cursor-pointer">
                           <span className="text-teal-500 text-sm md:text-2xl">🎁</span>
-                        <p className="text-gray-500 text-sm md:text-[17px] font-medium cursor-pointer">
-                          Landing page design and Facebook mastery course
-                        </p>
+                        <Link target="_blank" href="https://pro.hostnin.com" className="text-gray-500 text-sm md:text-[19px] underline decoration-dotted font-medium cursor-pointer">
+                          Landing page design and Facebook ads mastery course
+                        </Link>
                       </div>
                         {/* Tooltip */}
                         <div className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ">
@@ -202,15 +203,15 @@ const BdixHostingPrice = () => {
 
                     {/* Pro/Ultimate Plan Special Gift */}
                     {(plan.title === "Pro" || plan.title === "Ultimate") && (
-                      <div className="bg-green-50 rounded-lg p-3 relative group">
+                      <div  className="bg-green-50 rounded-lg p-3 relative group">
                         <div className="bg-teal-500 text-white text-xs font-semibold px-2 py-1 rounded-full inline-block mb-2">
                           Special Gift
                         </div>
                         <div className="flex items-center gap-1 cursor-pointer">
                           <span className="text-teal-500 text-sm md:text-2xl">🎁</span>
-                          <p className="text-gray-700 text-sm md:text-[17px]  font-medium">
-                            Landing page design and Facebook mastery course
-                          </p>
+                          <Link target="_blank" href="https://pro.hostnin.com" className="text-gray-700 text-sm md:text-[19px] underline decoration-dotted  font-medium">
+                           Landing page design and Facebook ads mastery course
+                          </Link>
                         </div>
                         {/* Tooltip */}
                         <div className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

@@ -10,7 +10,7 @@ const BDIXHeroSection = () => {
         {/* Left Side */}
         <div className="flex-1 max-w-xl text-center lg:text-left order-2 lg:order-1">
           <h1 className="text-[28px] sm:text-3xl md:text-4xl lg:text-5xl md:font-bold font-semibold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'var(--font-urbanist)' }}>
-            Affordable BDIX Hosting plan?
+            Affordable BDIX 
           </h1>
           <p className="text-[#232946] text-[15px] sm:text-base mb-3 sm:mb-4 leading-relaxed text-justify">
             We offer the fastest speeds for your BDIX hosting by providing servers located right here in Bangladesh. This proximity ensures that your website runs as smoothly and quickly as if it were hosted on your local computer.

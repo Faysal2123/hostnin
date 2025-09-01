@@ -196,7 +196,7 @@ const FAQComponent: React.FC = () => {
   const currentFaqs = faqData[selectedTab].faqs;
 
   return (
-    <div className="bg-[#f8f8f9]">
+    <div className="bg-[#f8f8f9] pb-5 md:pb-10">
       <div className="w-full max-w-7xl mx-auto py-6 sm:py-8 lg:py-10 pt-12 sm:pt-16 lg:pt-20 px-3 sm:px-4 ">
         <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-center mb-2 text-black">
           FAQs: Your questions, our answers

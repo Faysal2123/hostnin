@@ -49,7 +49,7 @@ export default function FeatureShowcaseSection() {
               Install over 150 CMS with one click.
             </h4>
             <button
-            onClick={() => router.push("/web-hosting")}
+            onClick={() => router.push("/hosting/web-hosting")}
             className="w-fit cursor-pointer px-6 py-3 bg-white text-[#0a174e] font-semibold rounded shadow hover:bg-gray-300 transition hover:text-black">
               See More Now
             </button>

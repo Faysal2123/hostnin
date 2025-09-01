@@ -5,7 +5,7 @@ const JobOpenings = () => {
     {
       id: 1,
       title: "Technical Support Engineer",
-      schedule: "Saturday - Wednesday, 06:00 PM - 02:00 AM EST",
+      schedule: "Saturday - Thursday, 01:00 AM - 12:00 PM BST",
       tags: ["cPanel/WHM", "Customer Service", "Tickets"],
       description:
         "We're looking for someone with advanced cPanel/WHM server administration experience (UI and CLI), with knowledge of CloudLinux, LiteSpeed, Imunify360, and JetBackup. As a Technical Support Engineer, your responsibilities are to assist our clients on tickets and help the Customer Service Reps team when needed.",
@@ -15,7 +15,7 @@ const JobOpenings = () => {
     {
       id: 2,
       title: "Customer Service Representative",
-      schedule: "Saturday - Wednesday, 06:00 PM - 02:00 AM EST",
+      schedule: "Saturday - Thursday, 01:00 AM - 12:00 PM BST",
       tags: ["LiveChat", "Tickets", "Customer Support"],
       description:
         "As a Customer Service Representative (L1), your primary responsibilities are to assist our clients in LiveChat and on tickets. Still, we don't have targets in terms of the number of chats or tickets per month. We strongly believe nobody should work more than 1-3 chats at a time if we want to deliver fantastic customer services, this is why we're hiring every few months, to make sure our clients are happy and our team is not overwhelmed.",
@@ -107,7 +107,7 @@ const JobOpenings = () => {
 
                 <div className="border-t border-gray-100 pt-6">
                   <a
-                    href="mailto:careers@example.com"
+                    href="mailto:careers@hostnin.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300"
@@ -124,10 +124,10 @@ const JobOpenings = () => {
           <p>
             Can't find a suitable position? Send your resume to{" "}
             <a
-              href="mailto:careers@example.com"
+              href="mailto:careers@hostnin.com"
               className="text-blue-600 hover:underline"
             >
-              careers@example.com
+              careers@hostnin.com
             </a>
           </p>
         </div>

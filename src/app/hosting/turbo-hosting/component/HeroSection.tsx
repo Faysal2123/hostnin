@@ -7,6 +7,7 @@ import { useEffect, useState, useMemo } from "react";
 import { MdDone } from "react-icons/md";
 import FeatureCards from "./card/FeatureCards";
 import { FaBolt } from "react-icons/fa";
+import imag from "../../../assets/turbo-hero.svg"
 
 function getTimeLeft(targetDate: Date) {
   const now = new Date();
@@ -38,7 +39,7 @@ const HeroSection = () => {
 
   
   return (
-    <section className="pt-8 pb-12 px-2 xs:px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
+    <section className="pt-8 pb-12 px-2  sm:pt-12 sm:pb-20 lg:pt-28 lg:pb-24 md:px-0 relative"
     style={{
       backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
       backgroundPosition: "left center, center",
@@ -48,9 +49,9 @@ const HeroSection = () => {
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0 pt-5">
         {/* Left Side */}
-        <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0 pt-8 md:pt-0">
+        <div className="flex-1 text-white lg:pr-12 text-center lg:text-start mb-8 lg:mb-0 pt-8 md:pt-0">
           <p className="text-yellow-400 font-bold mb-2 text-base xs:text-base sm:text-xl">Lightning-Fast Hosting for Seamless Performance</p>
-          <h1 className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 px-4 md:px-0" style={{ fontFamily: 'var(--font-urbanist)' }}>
           Get Turbo Hosting<br/>Flat 50% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm xs:text-base sm:text-lg">
@@ -109,9 +110,9 @@ const HeroSection = () => {
         </div>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex justify-center mt-4 sm:mt-8 lg:mt-0 w-full max-w-[220px] xs:max-w-xs sm:max-w-md lg:max-w-xl xl:max-w-2xl h-full">
+        <div className="flex-1 flex justify-center mt-4 sm:mt-8 lg:mt-0 w-full max-w-[220px] xs:max-w-xs sm:max-w-md lg:max-w-2xl xl:max-w-4xl h-full">
           <Image 
-            src="https://hostnin.com/wp-content/uploads/2023/06/hostim-hero-img.png"
+            src={imag}
             alt="Server Illustration" 
             width={400} 
             height={400} 

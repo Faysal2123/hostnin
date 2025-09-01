@@ -4,6 +4,7 @@ import Image from "next/image";
 import { featureTabs } from "../data/featureTabs";
 import { FeatureTab } from "../types/FeatureTab";
 import { MdDone } from "react-icons/md";
+import feature from "../../../assets/featureTab.svg"
 
 const FeatureTabSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(featureTabs[0].key);
@@ -16,7 +17,7 @@ const FeatureTabSection: React.FC = () => {
         <div className="flex-1 flex justify-center items-start w-full order-2 lg:order-1 lg:sticky lg:top-8">
           <div className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[500px] h-[200px] sm:h-[260px] md:h-[320px] lg:h-[400px] flex items-center justify-center">
             <Image
-              src="https://hostnin.com/wp-content/uploads/2022/09/laptop-man.png"
+              src={feature}
               alt={currentTab.title}
               width={400}
               height={400}

@@ -1,7 +1,4 @@
-
-
 import React from "react";
-
 
 import TermsCondition from "./TermsCondition";
 import { Metadata } from "next";

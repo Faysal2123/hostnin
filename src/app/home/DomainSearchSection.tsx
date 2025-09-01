@@ -9,15 +9,15 @@ export default function DomainSearchSection() {
   const [domain, setDomain] = useState("");
 
   return (
-    <div className="bg-[#f8f8f8] py-12 lg:py-20">
+    <div className="bg-[#f8f8f8] py-12 lg:py-10">
       <div className="bg-white rounded-2xl shadow-lg md:px-8 lg:px-16 py-5 px-4 flex flex-col md:flex-row items-center md:items-center justify-between gap-8 max-w-7xl mx-auto">
         {/* Left: Search and Prices */}
-        <div className="flex-1 w-full flex flex-col justify-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0A1440] mb-6">
+        <div className="flex-1 w-full flex flex-col justify-center ">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0A1440] mb-6 text-center md:text-start">
             Search your Domain Name
           </h2>
           <form
-            className="flex flex-row mb-6 max-w-xs md:max-w-md lg:max-w-xl"
+            className="flex flex-row mb-6 max-w-xs md:max-w-md lg:max-w-xl mx-auto md:mx-0"
             action="https://my.hostnin.com/cart.php?a=add&domain=register"
             method="post"
             target="_blank" 
@@ -58,7 +58,7 @@ export default function DomainSearchSection() {
               Search
             </button>
           </form>
-          <div className="flex md:gap-6 gap-4 flex-wrap">
+          <div className="flex md:gap-6 gap-4 flex-wrap mx-auto md:mx-0">
             {domainPrices.map(({ ext, price, color }: DomainPrice) => (
               <div key={ext} className="text-start md:min-w-[80px] min-w-[50px]">
                 <span className={`font-bold text-xl sm:text-2xl ${color}`}>

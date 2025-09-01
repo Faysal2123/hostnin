@@ -26,7 +26,7 @@ export default function ResellerHosting() {
       <PerformanceAndSupportSection></PerformanceAndSupportSection>
        <ReviewSection></ReviewSection>
        <WebAppHostingSection></WebAppHostingSection>
-       <PlanCarouselSection></PlanCarouselSection>
+       {/* <PlanCarouselSection></PlanCarouselSection> */}
 
     </>
   );

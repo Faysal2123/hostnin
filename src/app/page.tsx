@@ -1,8 +1,9 @@
 "use client"
 
+import ContactSalesBanner from "./home/ContactSalesBanner";
 import ControlPanelSection from "./home/ControlPanelSection";
 import DomainSearchSection from "./home/DomainSearchSection";
-import FeatureShowcaseSection from "./home/FeatureShowcaseSection";
+
 import HeroSection from "./home/HeroSection";
 import HostingPlansSection from "./home/HostingPlansSection";
 import MigrationPromoSection from "./home/MigrationPromoSection";
@@ -34,11 +35,13 @@ export default function Home() {
       <div ref={hostingPlansRef}>
         <HostingPlansSection></HostingPlansSection>
       </div>
-      <FeatureShowcaseSection></FeatureShowcaseSection>
+      {/* <FeatureShowcaseSection></FeatureShowcaseSection> */}
       
       <MigrationPromoSection onViewPricingClick={scrollToHostingPlans}></MigrationPromoSection>
+      
       <DomainSearchSection></DomainSearchSection>
       <ControlPanelSection></ControlPanelSection>
+      <ContactSalesBanner></ContactSalesBanner>
       <ReviewSection></ReviewSection>
       <TeamSupportSection></TeamSupportSection>
       

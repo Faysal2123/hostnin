@@ -46,7 +46,7 @@ const HeroSection = () => {
         </button>
       </div>
       {/* Feature Cards at Bottom */}
-      <div id="feature-cards-section" className="absolute  left-0 right-0 bottom-[-1250px] sm:bottom-[-150px] md:bottom-[-180px] lg:bottom-[-240px] xl:bottom-[-400px] z-10 flex justify-center px-4">
+      <div id="feature-cards-section" className="absolute  left-0 right-0 bottom-[-1270px] sm:bottom-[-150px] md:bottom-[-180px] lg:bottom-[-240px] xl:bottom-[-400px] z-10 flex justify-center px-4">
         <div className="w-full max-w-7xl mx-auto">
           <FeatureCards cards={resellerPricingPlans} />
         </div>

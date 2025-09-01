@@ -47,7 +47,7 @@ const PlanIncludesSection = () => {
     <section className="w-full bg-[#f8f8f8] py-5 pb-10">
       <div className="max-w-7xl mx-auto md:px-4 px-3">
         <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#03206B] mb-5 md:mb-14 tracking-tight font-['Urbanist',sans-serif]">
-          All WordPress Hosting Plans Include
+          All Turbo Hosting Plans Include
         </h2>
         <div className="max-w-7xl mx-auto grid grid-cols-1  md:grid-cols-3 gap-4  md:gap-8">
           {features.map((feature, idx) => (

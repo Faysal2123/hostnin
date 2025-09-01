@@ -102,7 +102,7 @@ const ControlPanelSection = () => {
   const currentContent = tabContent[activeTab];
 
   return (
-    <div className="min-h-screen bg-[#f8f8f8] pt-12 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-[#f8f8f8] py-5 pt-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#13205A] mb-4">
           User-Friendly Control Panel
@@ -116,10 +116,10 @@ const ControlPanelSection = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`py-2 px-3 sm:py-3 sm:px-6 m-1 text-sm sm:text-lg font-medium transition-colors duration-200 rounded ${
+              className={`py-2 px-3 sm:py-3 sm:px-6 m-1 text-lg sm:text-lg font-bold transition-colors duration-200 rounded ${
                 activeTab === tab.id
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "text-blue-600 border-b-2 border-blue-600 cursor-pointer"
+                  : "text-gray-500 hover:text-gray-700 cursor-pointer"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >

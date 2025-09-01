@@ -1,3 +1,4 @@
+"use client"; // <-- add this at the top
 import Image from 'next/image';
 import React from 'react';
 
@@ -5,10 +6,9 @@ import TeamImage from '../../assets/team/img1.webp';
 import GrowthImage from '../../assets/team/img2.png';
 import InspirationImage from '../../assets/team/img-8.jpg';
 
-
 const JobsSection = () => {
   return (
-    <section className="bg-[#f8f8f8] py-16 px-4">
+    <section className="bg-[#f8f8f8] py-5 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           {/* Text Content */}
@@ -26,18 +26,29 @@ const JobsSection = () => {
               If this sounds like a place where you'd thrive, join our team and help us make online success possible for everyone.
             </p>
             <div>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+              <button
+                onClick={() => {
+                  const JobsSection = document.getElementById("job-apply");
+                  if (JobsSection) {
+                    JobsSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 cursor-pointer"
+              >
                 Join our team
               </button>
             </div>
           </div>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
-            <div className="relative row-span-2 rounded-lg overflow-hidden shadow-lg">
+      
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full  ">
+            <div className="relative row-span-2 rounded-lg overflow-hidden shadow-lg hidden md:block">
               <Image
                 src={TeamImage}
-                alt="Teamwork at Hostinger"
+                alt="Teamwork at Hostnin"
                 fill
                 className="object-cover"
               />
@@ -45,7 +56,7 @@ const JobsSection = () => {
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={GrowthImage}
-                alt="Growth at Hostinger"
+                alt="Growth at Hostnin"
                 fill
                 className="object-cover"
               />
@@ -53,14 +64,15 @@ const JobsSection = () => {
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={InspirationImage}
-                alt="Inspiration at Hostinger"
+                alt="Inspiration at Hostnin"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
+          </div>
         </div>
-      </div>
+      
     </section>
   );
 };

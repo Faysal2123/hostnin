@@ -7,6 +7,7 @@ import { useEffect, useState, useMemo } from "react";
 import { MdDone } from "react-icons/md";
 import FeatureCards from "./card/FeatureCards";
 import { FaBolt } from "react-icons/fa";
+import img from "../../../assets/banglaee.svg"
 
 function getTimeLeft(targetDate: Date) {
   const now = new Date();
@@ -61,9 +62,9 @@ const HeroSection = () => {
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-yellow-400 font-bold mb-2 text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
-            We Provide Fastest<br/>BDIX Hosting
+            We Provide Fastest <br/>Bangladeshi Hosting
           </h1>
-          <p className="text-lg font-semibold">BDIX Hosting Plan - Starts from only <span className="text-yellow-400">৳499/month</span></p>
+          <p className="text-lg font-semibold">BDIX Hosting Plan - Starts from only <span className="text-yellow-400">৳1199/month</span></p>
           <ul className="mb-4 sm:mb-6 md:mb-8 my-3 sm:my-5 space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-lg grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 px-2 sm:px-0">
             <li className="flex items-center gap-1.5 sm:gap-2 justify-center lg:justify-start">
               <span className="text-base sm:text-lg md:text-xl text-white"><MdDone /></span> 
@@ -123,9 +124,9 @@ const HeroSection = () => {
          </div>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex justify-center mt-4 sm:mt-8 lg:mt-0 w-full max-w-xs sm:max-w-md lg:max-w-xl xl:max-w-2xl h-full">
+        <div className="flex-[1] flex justify-center mt-4 sm:mt-8 lg:mt-0 w-full max-w-xs sm:max-w-md lg:max-w-xl xl:max-w-2xl h-full">
           <Image 
-            src="https://hostnin.com/wp-content/uploads/2022/09/hero-vector.png"
+            src={img}
             alt="Server Illustration" 
             width={400} 
             height={400} 

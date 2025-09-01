@@ -3,6 +3,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import pricingPlans from "../../data/pricingPlans";
 import { useState } from "react";
+import Link from "next/link";
 
 const tabClass = (active: boolean) =>
   `px-3 sm:px-4 md:px-7 md:py-1.5 py-1 cursor-pointer font-semibold text-sm sm:text-sm md:text-base focus:outline-none transition-colors duration-200 rounded-full ${
@@ -69,7 +70,7 @@ const PricingSection = () => {
 
   return (
     <section
-      className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] pt-8 md:pt-[550px] lg:pt-60 px-3 sm:px-6"
+      className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-8  bg-[#f8f8f8] pt-8 md:pt-[550px] lg:pt-60 px-3 sm:px-6"
       style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
     >
       <div className="w-full max-w-7xl">
@@ -197,9 +198,9 @@ const PricingSection = () => {
                         
                         <div className="flex items-center gap-1 cursor-pointer">
                           <span className="text-sm md:text-2xl">🎁</span>
-                        <p className="text-gray-500 text-sm md:text-[17px] font-medium cursor-pointer">
-                          Landing page design and Facebook mastery course
-                        </p>
+                        <Link target="_blank" href="https://pro.hostnin.com"  className="text-gray-500 text-sm md:text-[19px] underline decoration-dotted font-medium cursor-pointer">
+                          Landing page design and Facebook ads mastery course
+                        </Link>
                         </div>
                         {/* Tooltip */}
                         <div className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ">
@@ -217,9 +218,9 @@ const PricingSection = () => {
                         </div>
                         <div className="flex items-center gap-1 cursor-pointer">
                           <span className="text-teal-500 md:text-2xl text-sm">🎁</span>
-                          <p className="text-gray-700 text-sm md:text-[17px]  font-medium">
-                            Landing page design and Facebook mastery course
-                          </p>
+                          <Link target="_blank" href="https://pro.hostnin.com" className="text-gray-700 text-sm md:text-[19px] underline decoration-dotted  font-medium">
+                           Landing page design and Facebook ads mastery course
+                          </Link>
                         </div>
                         {/* Tooltip */}
                         <div className="absolute left-0 top-full mt-2 z-50 w-80 bg-blue-600 text-white text-sm md:text-lg rounded-lg p-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

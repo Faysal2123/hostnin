@@ -9,7 +9,7 @@ import DomainSearchSection from "./component/DomainSearchSection";
 import FAQComponent from "../cloud-hosting/components/FAQComponent";
 import BDIXHeroSection from "./component/BDIXHeroSection";
 import BDIXFeaturesSection from "./component/BDIXFeaturesSection";
-import PlanCarouselSection from "./component/PlanCarouselSection";
+// import PlanCarouselSection from "./component/PlanCarouselSection";
 import BDIXReviewSection from "./component/BDIXReviewSection";
 import FeatureBenefitSection from "./component/FeatureBenefitSection";
 import ComparisonTable from "./component/ComparisonTable";
@@ -34,7 +34,7 @@ export default function BDIXHosting() {
       <BDIXHeroSection></BDIXHeroSection>
       <BDIXReviewSection />
       <FAQComponent></FAQComponent>
-       <PlanCarouselSection></PlanCarouselSection>
+       {/* <PlanCarouselSection></PlanCarouselSection> */}
       
     </>
   );

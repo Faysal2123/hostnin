@@ -26,7 +26,7 @@ const sliderSettings = {
 };
 
 const TestimonialSection = () => (
-  <section className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 py-8 sm:py-12 px-4 sm:px-6 bg-[#f8f8f8]" style={{ fontFamily: '"Mulish", sans-serif' }}>
+  <section className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 py-8 sm:pb-12 px-4 sm:px-6 bg-[#f8f8f8] pt-12" style={{ fontFamily: '"Mulish", sans-serif' }}>
     {/* Left Side */}
     <div className="relative w-full lg:flex-1 max-w-lg flex flex-col items-start">
       {/* Background Circle */}

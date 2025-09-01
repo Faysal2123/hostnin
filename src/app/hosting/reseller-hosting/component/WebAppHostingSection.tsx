@@ -2,8 +2,10 @@ import Image from "next/image";
 import { partnersData } from "../../web-hosting/data/partnersData";
 
 
+
 const WebAppHostingSection = () => (
- <div className="bg-[#001143]">
+ <div className="pb-12 bg-gray-50">
+  <div className="bg-[#001143]">
      <section className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16 flex flex-col items-center px-4 sm:px-6">
     <h2 className="text-[28px] sm:text-3xl md:text-5xl font-bold text-center text-white mb-8 sm:mb-10 md:mb-12">
       Web Hosting Infrastructure <span className="text-[#FFB800]">Partners</span>
@@ -25,6 +27,7 @@ const WebAppHostingSection = () => (
       ))}
     </div>
   </section>
+ </div>
  </div>
 );
 

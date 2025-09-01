@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import img from "../../assets/man-attending-online-meeting.png"
+import Link from 'next/link';
 
 const HostninAffiliate = () => {
   return (
@@ -11,7 +12,7 @@ const HostninAffiliate = () => {
           {/* Left Content Section */}
           <div className="md:w-1/2 p-8 sm:p-12 lg:p-12 flex flex-col justify-center">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 leading-tight">
-              Become a Bluehost Affiliate in just a few easy steps
+              Become a Hostnin Affiliate in just a few easy steps
             </h1>
             
             <div className="space-y-8">
@@ -49,16 +50,16 @@ const HostninAffiliate = () => {
                   </div>
                 </div>
                 <div className="ml-5">
-                  <h2 className="text-xl font-semibold text-gray-900">Get paid $65+ per sale</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">Get paid 50% per sale</h2>
                   <p className="mt-2 text-gray-600">Earn competitive commissions on every qualified sale.</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
-              <button className="w-full md:w-auto px-10 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+              <Link href="https://my.hostnin.com/affiliates.php" className="w-full md:w-auto px-10 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
                 Join Now
-              </button>
+              </Link>
             </div>
           </div>
 

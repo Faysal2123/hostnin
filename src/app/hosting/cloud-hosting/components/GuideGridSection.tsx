@@ -8,7 +8,7 @@ const guides = [
     image: "https://hostnin.com/wp-content/uploads/2023/08/Green-Minimalist-Tips-Gradient-Blog-Banner.png",
     category: "Cloud Hosting Guide",
     title: "কিভাবে টেম্পোরারি লিংক থেকে লাইভ করবেন?",
-    link: "https://hostnin.com/guides/update-temporary-link/",
+    link: "https://guides.hostnin.com/update-temporary-link/",
   },
   {
     image: "https://hostnin.com/wp-content/uploads/2023/08/Green-Minimalist-Tips-Gradient-Blog-Banner-3.png",

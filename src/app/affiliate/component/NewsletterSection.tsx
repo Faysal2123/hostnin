@@ -40,7 +40,7 @@ const NewsletterSection = () => {
           >
            Get the Offer
           </button>
-          <Link href="https://api.whatsapp.com/send/?phone=8801325875955&text&type=phone_number&app_absent=0" className='text-green-500 pt-4 font-bold text-base md:text-lg hover:text-green-700'> Chat With an Expert</Link>
+          <Link href="https://api.whatsapp.com/send/?phone=8801325875955&text&type=phone_number&app_absent=0" className='text-yellow-500 pt-4 font-bold text-base md:text-lg hover:text-yellow-700'> Chat With an Expert</Link>
         </div>
       </section>
     </div>

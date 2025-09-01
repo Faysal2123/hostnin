@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-[#001158] text-white pt-8 sm:pt-12 pb-6 px-4 sm:px-6 md:px-0">
       <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-4">
         {/* Payment/Partner Icons */}
-        <div className="rounded-md w-full">
+        <div className="rounded-md w-full hidden md:block">
           <Image
             src="https://securepay.sslcommerz.com/public/image/SSLCommerz-Pay-With-logo-All-Size-01.png"
             alt="payment icons"
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation Links */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6 py-6 border-t border-b border-white/20">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6 py-6 md:border-t md:border-b md:border-white/20">
           {/* Hosting */}
           <div>
             <h3 className="font-bold text-base sm:text-lg mb-3">Hosting</h3>
@@ -219,7 +219,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2 sm:gap-4 pt-4">
           <span className="text-center sm:text-left text-white/90">
-            © 2025 Hostnin. All Rights Reserved
+            © 2025 <a href="https://hostnin.com/">Hostnin</a>. All Rights Reserved
           </span>
           <div className="flex flex-wrap gap-2 justify-center sm:justify-end">
             <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>

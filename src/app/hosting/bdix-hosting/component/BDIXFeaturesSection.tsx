@@ -64,7 +64,7 @@ const BDIXFeaturesSection = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center py-12 sm:py-20 lg:py-14 bg-[#f8f8f8] px-4">
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 text-start">BDIX Hosting Features</h2>
+        <h2 className="text-3xl sm:text-5xl font-bold text-black mb-4 text-start">BDIX Hosting Features</h2>
         <p className="text-[#232946] text-base mb-5 text-start max-w-2xl">
           Our BDIX hosting offers essential features for easier use and faster response times for your website.
         </p>

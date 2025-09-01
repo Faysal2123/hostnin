@@ -10,6 +10,7 @@ import arrowDark from "../assets/arrow-dark.webp";
 
 import { IoIosStar } from "react-icons/io";
 import { testimonials } from "../hosting/web-hosting/data/testimonialData";
+import Link from "next/link";
 
 const sliderSettings = {
   dots: false,
@@ -25,7 +26,7 @@ const sliderSettings = {
 
 const ReviewSection = () => (
   <div className="bg-[#f8f8f8] pb-5">
-    <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-8 py-5 md:py-12 px-2 sm:px-6">
+    <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-8 py-5 md:pb-5 px-2 sm:px-6">
       {/* Left Side */}
       <div className="relative w-full lg:flex-1 max-w-lg flex flex-col items-start">
         {/* Background Circle */}
@@ -85,7 +86,7 @@ const ReviewSection = () => (
                 height={32}
                 className="mr-1"
               />
-              More Review
+              <Link href="https://www.google.com/search?q=hostnin&oq=hostnin&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMgYIARBFGDwyBggCEEUYQTIGCAMQRRg8MhIIBBAuGCcYrwEYxwEYgAQYigUyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEHSAQgxODQzajBqNKgCALACAQ&sourceid=chrome&ie=UTF-8#lrd=">More Review</Link>
             </span>
           </div>
         </div>

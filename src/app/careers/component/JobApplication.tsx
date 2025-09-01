@@ -1,10 +1,10 @@
 "use client";
-import Link from 'next/link';
+
 
 export default function JobApplication() {
   return (
     <section className="bg-[#f8f8f8] pb-10  px-4">
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div id="job-apply" className="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2 bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white">
             <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>

@@ -40,34 +40,30 @@ const HeroSection = () => {
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
               <button
-  onClick={() => {
-    const pricingSection = document.getElementById("pricing-section");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }}
-  className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 
+                onClick={() => {
+                  const pricingSection =
+                    document.getElementById("pricing-section");
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
+                className="group w-full sm:w-auto cursor-pointer bg-white text-gray-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 
     rounded-full border border-gray-300 hover:bg-gray-100 
     transition-transform duration-300 ease-in-out 
     flex items-center justify-center text-sm sm:text-base lg:text-[17px] 
     hover:scale-105"
->
-  Start My Hosting Now
-  <span
-    className="ml-2 flex items-center "
-  >
-    <FaArrowRightLong className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
-  </span>
-</button>
-              <a
-                href="#"
-                className="text-white flex items-center group font-bold text-base sm:text-lg"
               >
+                Start My Hosting Now
+                <span className="ml-2 flex items-center ">
+                  <FaArrowRightLong className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                </span>
+              </button>
+              <p className="text-white flex items-center group font-bold text-base sm:text-lg">
                 Trusted By 5000+ Business
-              </a>
+              </p>
             </div>
 
             {/* Guarantee Text */}

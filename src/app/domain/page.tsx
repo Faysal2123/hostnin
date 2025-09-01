@@ -1,4 +1,4 @@
-import Footer from "@/app/layout/Footer";
+
 import Navbar from "@/app/layout/Navbar";
 import HeroSection from "./component/HeroSection";
 import DomainSearchSection from "./component/DomainSearchSection";
@@ -20,7 +20,7 @@ export default function Home() {
       <SupportTeamSection />
       <DomainFeaturesSection />
       <FAQSection />
-      <Footer />
+      
     </div>
   );
 }

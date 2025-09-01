@@ -32,7 +32,7 @@ const cards = [
 
 const WhyChooseDedicatedSection: React.FC = () => {
   return (
-    <div className='bg-[#f8f8f8] py-10'>
+    <div className='bg-[#f8f8f8] md:py-10'>
       <section
         className="w-full py-10 px-2 md:px-0 relative"
         style={{
@@ -45,7 +45,7 @@ const WhyChooseDedicatedSection: React.FC = () => {
           height: '100%',
         }}
       >
-        <div className="max-w-7xl mx-auto text-center mb-12">
+        <div className="max-w-7xl mx-auto text-center md:mb-12">
           <h2 className="text-[30px] md:text-5xl font-bold text-white mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Why choose Hostnin for Dedicated Servers?
           </h2>

@@ -44,7 +44,7 @@ const HeroSection = () => {
 
           {/* Domain Search Form */}
           <form
-            className="flex flex-row mb-6 max-w-xs md:max-w-md lg:max-w-xl"
+            className="flex flex-row mb-6 max-w-xs md:max-w-md lg:max-w-xl mx-auto md:mx-0"
             action="https://my.hostnin.com/cart.php?a=add&domain=register"
             method="post"
             target="_blank"

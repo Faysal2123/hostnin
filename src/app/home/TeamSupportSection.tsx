@@ -49,7 +49,7 @@ const TeamSupportSection = () => {
         {/* Header */}
         <div className="text-center mb-10 px-2">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight leading-snug">
-            24/7 Instant Expert Support by an Outstanding Team
+           Expert Support by an Outstanding Team
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Our smart AI Assistant helps you fix issues quickly, but if you ever need extra care, our human experts are just a message away.
@@ -68,7 +68,7 @@ const TeamSupportSection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 sm:gap-12 p-6 sm:p-10 bg-gradient-to-r from-gray-50 via-white to-gray-50">
                     {/* Image */}
                     <div className="flex justify-center">
-                      <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 hover:scale-105 transition-transform duration-500">
+                      <div className="relative w-52 h-52 sm:w-56 sm:h-56 md:w-80 md:h-80 hover:scale-105 transition-transform duration-500">
                         {/* Gradient Ring */}
                         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 p-2.5">
                           {/* White inner border */}
@@ -89,14 +89,16 @@ const TeamSupportSection = () => {
                     </div>
 
                     {/* Text */}
+                    
                     <div className="text-center md:text-left px-2">
+                          <h1 className="text-xl md:text-xl text-start font-bold mb-6">Meet Our Support Hero</h1>
                       <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
                         {member.name}
                       </h3>
-                      <p className="text-lg sm:text-xl text-blue-600 font-semibold mb-4 sm:mb-6">
+                      <p className="text-lg sm:text-2xl text-blue-600 font-semibold mb-4 sm:mb-6">
                         {member.role}
                       </p>
-                      <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+                      <p className="text-gray-600 text-base md:text-xl leading-relaxed">
                         Dedicated support professional ensuring{" "}
                         <span className="font-medium text-gray-900">
                           fast responses

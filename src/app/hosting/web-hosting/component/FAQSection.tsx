@@ -38,7 +38,7 @@ const FAQSection: React.FC = () => {
 
   return (
     <section
-      className="w-full pb-40 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6"
+      className="w-full pb-10 md:pb-20 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6"
       style={{ overflowAnchor: "none" }}
     >
       <div className="pb-8 text-center">

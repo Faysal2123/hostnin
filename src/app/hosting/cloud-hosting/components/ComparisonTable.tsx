@@ -33,7 +33,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => {
   }, []);
 
   return (
-    <div className="bg-[#f8f8f8] py-8 sm:py-12 lg:py-16 lg:pb-28">
+    <div className="bg-[#f8f8f8] py-8 sm:py-12 lg:py-16 lg:pb-28 hidden md:block">
       <div className="max-w-7xl mx-auto ">
         <div className="text-center mb-8 sm:mb-12">
           <h1 className="text-[26px] sm:text-3xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
